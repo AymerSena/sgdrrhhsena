@@ -1,11 +1,24 @@
 <?php
-if (isset($_POST["btn_guardar"]))
-{
-    if (!empty($_POST["nameEva"]) && strlen($_POST["nameEva"]) <=20 && !is_numeric($_POST["nameEva"]) && !preg_match("/[0-9]/" , $_POST["nameEva"])){
-        echo $_POST["nameEva"] . "<br/>";
+$conexion = mysqli_connect("localhost","root","","sgdrrhhbd");// conexion a BD
+if ($conexion -> connect_error){
+    echo "Conexion errada";
+}else{
+    echo "Conexion exitosa";
+    if(!empty($_POST["nameEva"])){
+        $nombreEva=$_POST["nameEva"];
+        echo $_POST["nameEva"];
     }
-    if (!empty($_POST["descriEva"]) && strlen($_POST["descriEva"]) <=200 && !is_numeric($_POST["descriEva"]) && !preg_match("/[0-9]/" , $_POST["descriEva"])){
-        echo $_POST["descriEva"] . "<br/>";
+    if(!empty($_POST["descriEva"])){
+        $decripEva=$_POST["descriEva"];
+        echo $_POST["descriEva"];
     }
+    $comandoinsersion="insert into tblevaluaciones values (null,'$nombreEva','$decripEva',null)";
+    $resultado = $conexion ->query($comandoinsersion);
+
 }
+
 ?>
+
+
+
+

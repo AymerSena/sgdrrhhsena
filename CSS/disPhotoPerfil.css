@@ -84,6 +84,7 @@ div {
     border: blue solid 1px;
     margin-top: 5px;
     margin-left: 5px;
+    text-align: center;
 }
 
 .titlePag h1 {
@@ -121,31 +122,24 @@ div {
     padding: auto;
 }
 
-.buttonCont {
-    border: solid 1px blue;
-    width: 100px;
-    height: 100px;
-    margin: 20px;
-    font-size: 15px;
-    font-weight: bold;
-    border-radius: 5px;
-}
-
-.buttonCont:hover {
-    border: solid 1px blue;
-    width: 100px;
-    height: 100px;
-    margin: 20px;
-    font-size: 15px;
-    font-weight: bold;
-    border-radius: 5px;
-    background: rgb(224, 224, 224);
-}
-
 #logoUnix {
     position: inherit;
     width: 150px;
     height: 170px;
     bottom: 0;
     right: 0;
+}
+
+.formularioFoto {
+    font-size: 20px;
+    margin: 10%;
+}
+
+.formularioFoto input {
+    font-size: 20px;
+}
+
+.formularioFoto button {
+    font-size: 20px;
+    border: solid blue 2px;
 }

@@ -19,7 +19,7 @@
                     <a href=""><img id="notificacion" src="https://1.bp.blogspot.com/-EO10WM7B0Ig/YT5yOT5S7JI/AAAAAAAAAGw/FfqaAQ19Y709UTCC9jBUt7CW9pEv8_xjACNcBGAsYHQ/s0/IconoNotificaciones.png"></a>
                 </li>
                 <li>
-                    <a href="index.html"><img id="cerrarSe" src="https://1.bp.blogspot.com/-BM03tlw4TH0/YT5yOxEwdoI/AAAAAAAAAG0/LneMrf5vRD0ooVH6n92poAdrIa8balaRACNcBGAsYHQ/s0/IconoSalir.png"></a>
+                    <a href="Index.php"><img id="cerrarSe" src="https://1.bp.blogspot.com/-BM03tlw4TH0/YT5yOxEwdoI/AAAAAAAAAG0/LneMrf5vRD0ooVH6n92poAdrIa8balaRACNcBGAsYHQ/s0/IconoSalir.png"></a>
                 </li>
             </ul>
         </nav>
@@ -28,31 +28,35 @@
     <img id="foto_perfil" src="Iconos_imagenes/IconoAgregarPregunta.png" class="ubi1">
 
     <div id="presentacion">
-        <form action="crear.php" method="POST">
+        <form method="POST">
             <h3><label>CARGO.: </label></h3><label>_____________________________</label>
             <h3><label>NOMBRE.:</label></h3><label>_____________________________</label>
             <blockquote>
                 <h4>
-                    Cuantas preguntas desea realizar: <input type="text" size="5" name="No_pregunta" id="no_pregunta">
-                    <br>
-
-                    <br> Pregunta 1: <br>
-                    <input type="text" size="50" name="pregunta1" id="pregunta1">
-                    <br> Pregunta 2: <br>
-                    <input type="text" size="50" name="pregunta2" id="pregunta2">
-                    <br> Pregunta 3: <br>
-                    <input type="text" size="50" name="pregunta3" id="pregunta3">
-                    <br> Pregunta 4: <br>
-                    <input type="text" size="50" name="pregunta4" id="pregunta4">
-                    <br> Pregunta 5: <br>
-                    <input type="text" size="50" name="pregunta5" id="pregunta5">
-                    <br> Pregunta 6: <br>
-                    <input type="text" size="50" name="pregunta6" id="pregunta6">
+                    <br> Pregunta: <br>
+                    <input type="text" size="50" name="preguntaN" id="pregunta1">
+                    <br> Valor: <br>
+                    <input type="text" size="50" name="Valor" id="pregunta2">
                     <br>
                     <input type="submit" name="boton" value="cargar" id="btngrabar">
             </blockquote>
         </form>
     </div>
+<?php
+require("conexionBD.php");//llama conexionBd
+if(isset($_POST['boton'])){
+    $lapregunta=$_POST['preguntaN'];
+    $valorpre=$_POST['Valor'];
+    $sql="INSERT INTO tblpreguntaseva values (null,'$lapregunta','$valorpre',null)";
+    $resultado= $conexion->query($sql);
+    echo $lapregunta. " ".$valorpre;
+}
+
+?>
+
+
 </body>
+
+
 
 </html>
