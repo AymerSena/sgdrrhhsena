@@ -28,6 +28,7 @@
             <button class="buttonCont" onclick="location.href='informeNomina.php'">Nomina</button>
             <button class="buttonCont" onclick="location.href='vacaciInforme.php'">Informe de vacaciones</button>
             <button class="buttonCont" onclick="location.href='infoResulEvalua.php'">Resultados evaluativos</button>
+            <button class="buttonCont" onclick="location.href='certi.php'">Certificados</button>
             <img src="https://1.bp.blogspot.com/-CRGFBvE8s8k/YT5yRhIEj8I/AAAAAAAAAHM/dplt4qgxJmcjfSP213rWRyF0EoW_BQlSACNcBGAsYHQ/s332/logoPag.png" id="logoUnix">
         </div>
     </div>

@@ -30,12 +30,36 @@
                 <div class="conteinerLeft">
                <form action="POST">
                    <h2>Tabla de resultados  </h2>
+
                    <select name="areaSelect" id="areaSelect">
-                       <option value="*">Seleccione área</option>
+                       <option value="111">Seleccione área</option>
+                       <?php
+        require("conexionBD.php");
+        $queryBdJub="SELECT * FROM tblarea;";
+        $answerQueSql=$conexion->query($queryBdJub);
+        foreach($answerQueSql as $rowsCol){
+        ?>
+        <option value="<?php echo $rowsCol['AreCodigo']; ?>"><?php echo $rowsCol['AreNombre'];?></option>
+        <?php
+        }
+        ?>
                    </select>
+
                    <select name="peopleSelect" id="peopleSelect">
                        <option value="*">Selccione funcionario</option>
+        <?php
+        $queryPerson="SELECT * FROM tblusuario;";
+        $answerQueSql1=$conexion->query($queryPerson);
+        foreach($answerQueSql1 as $rowsCol){
+        ?>
+        <option value="<?php echo $rowsCol['UsuCedula']; ?>"><?php echo $rowsCol['UsuNombre'].' '.$rowsCol['UsuApellido']?></option>
+        <?php
+        }
+        ?>
                    </select>
+
+
+                   <button>Graficar filtros</button>
                </form>
                <table class="resultTable">
                    <tr>
