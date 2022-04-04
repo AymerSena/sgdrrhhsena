@@ -1,0 +1,8 @@
+.float-clear{clear:both;}
+.float-left{float:left; margin-left:20px}
+.product-item input[type="text"] {padding: 5px;border:#ccc 1px solid;border-radius:4px;margin: 0px 10px;}
+#header div{padding: 20px 15px 15px;margin: 0px 0px;}
+.col-heading{width:220px;font-size:16px;font-weight:bold;margin-left: 90px;}
+.col-heading2{width:220px;font-size:16px;font-weight:bold;}
+#header{ background:rgb(5, 5, 5); height:60px; color:#FFF}
+.btn-action{padding:10px 0;}
