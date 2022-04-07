@@ -28,7 +28,7 @@
                     <li><a href="photoPerfil.php"><img src="<?php echo $return; ?>" id="photoPer"></a></li>
                     <li> <img src="https://1.bp.blogspot.com/-EO10WM7B0Ig/YT5yOT5S7JI/AAAAAAAAAGw/FfqaAQ19Y709UTCC9jBUt7CW9pEv8_xjACNcBGAsYHQ/s0/IconoNotificaciones.png" id="photoNoti"></li>
                     <li><button>Gestion contraseña</button></li>
-                    <li><button>Cerrar sesión</button></li>
+                    <li><button><a href="index.php">Cerrar sesión</a></button></li>
                 </ul>
             </nav>
         </div>
@@ -41,7 +41,7 @@
         <nav id="logos">
             <ul>
                 <li>
-                    <a href=""><img class="logo" src="https://1.bp.blogspot.com/--_3Twc7jE_4/YT5yHKJ8sqI/AAAAAAAAAF0/ywykiJsi3yY8S1op1g-MyU8O072GJoeYACNcBGAsYHQ/s0/IconoAdmPerfiles.png"></a>
+                    <a href="crearUsuario.php"><img class="logo" src="https://1.bp.blogspot.com/--_3Twc7jE_4/YT5yHKJ8sqI/AAAAAAAAAF0/ywykiJsi3yY8S1op1g-MyU8O072GJoeYACNcBGAsYHQ/s0/IconoAdmPerfiles.png"></a>
                 </li>
                 <li>
                     <a href=""><img class="logo" src="https://1.bp.blogspot.com/-pWbP6N_2-F0/YT5yIQZXEtI/AAAAAAAAAGA/n0-4cvp7gFYTvNkgiiwsFx1FQM-5hRWZACNcBGAsYHQ/s320/IconoCarDesArch.png"></a>

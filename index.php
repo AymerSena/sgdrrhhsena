@@ -1,3 +1,7 @@
+<?php
+require("conexionBD.php");  
+require("constaVari.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,14 +25,19 @@
             <input type="password" placeholder="Contrasena" name="Contrasena"><br><br>
             <button id="boton" type="submit" name="Iniciarsesion">Iniciar sesión</button><br><br>
             <button id="boton1" type="submit" name="resContraseña">Restablecer contraseña</button><br><br>
-            
+            <a href="<?php echo $menuAdmin?>">Direcionar al menú administrador</a>
         
         </form>
     </section>
 
 </body>
 <?php
-require("conexionBD.php");
+
+
+
+
+/*
+//Codigo de ivan.
 if (isset($_POST['Iniciarsesion'])) {
     $docu = $_POST['Usuario'];
     $contra = $_POST['Contrasena'];
@@ -68,5 +77,6 @@ if (isset($_POST['Iniciarsesion'])) {
         }
     }
 }
+*/
 ?>
 </html>

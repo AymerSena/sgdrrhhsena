@@ -1,0 +1,3 @@
+<?php
+$menuAdmin = "menuAdministrador.php";
+?>
