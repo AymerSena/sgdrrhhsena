@@ -1,3 +1,6 @@
+<?php
+require("sesionAdmin.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,7 +31,9 @@
                     <li><a href="photoPerfil.php"><img src="<?php echo $return; ?>" id="photoPer"></a></li>
                     <li> <img src="https://1.bp.blogspot.com/-EO10WM7B0Ig/YT5yOT5S7JI/AAAAAAAAAGw/FfqaAQ19Y709UTCC9jBUt7CW9pEv8_xjACNcBGAsYHQ/s0/IconoNotificaciones.png" id="photoNoti"></li>
                     <li><button>Gestion contraseña</button></li>
-                    <li><button><a href="index.php">Cerrar sesión</a></button></li>
+                    <form action="" method="POST">
+                    <li><button name="cerrar_sesion">Cerrar sesión</button></li>
+                    </form>
                 </ul>
             </nav>
         </div>
@@ -63,16 +68,20 @@
                 </li>
             </ul>
         </nav>
+        <form action="" method="POST">
+            <button name="claro">Cerrar</button>
+        </form>
         <img src="https://1.bp.blogspot.com/-CRGFBvE8s8k/YT5yRhIEj8I/AAAAAAAAAHM/dplt4qgxJmcjfSP213rWRyF0EoW_BQlSACNcBGAsYHQ/s332/logoPag.png" id="logoUnix">
     </div>
         </div>
     </div>
+
     <div class="foo">
         <footer>
             <h2>Pie de página va acá</h2>
         </footer>
     </div>
-   
+ 
 </body>
 
 </html>
