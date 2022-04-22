@@ -1,3 +1,9 @@
+<?php
+require("sesionJefe.php");
+
+require("sesionAdmin.php");
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 

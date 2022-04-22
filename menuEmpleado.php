@@ -1,3 +1,6 @@
+<?php
+require("sesionEmpleado.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 

@@ -1,4 +1,7 @@
 <?php
+require("sesionJefe.php");
+?>
+<?php
 	if(!empty($_POST["guardar"])) {
 	    $conn = mysqli_connect("localhost","root","","sgdrrhhbd");
 		$contador = count($_POST["pro_nombre"]);
