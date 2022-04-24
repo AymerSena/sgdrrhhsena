@@ -89,12 +89,14 @@
                     </a>
                 </li>
                 <li>
-                    <a href="../logout.php">
+                    <a href="Index.php">
                         <span class="icon">
                             <ion-icon name="log-out-outline"></ion-icon>
                             </ion-icon>
                         </span>
-                        <span class="text">Cerrar Sesión</span>
+                        <form action="" method="$_POST">
+                        <span class="text" name="cierre">Cerrar Sesión</span>
+                        </form>
                     </a>
                 </li>
             </ul>

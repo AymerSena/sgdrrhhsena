@@ -69,7 +69,7 @@ if (isset($_POST["iniciarSesion"])) {
         
         </form>
     </section>
-
+    <!--subido... linea de texto -->
 </body>
 <?php
 
@@ -117,6 +117,7 @@ if (isset($_POST['Iniciarsesion'])) {
         }
     }
 }
+
 */
 ?>
 </html>

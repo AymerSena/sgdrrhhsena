@@ -1,5 +1,5 @@
 <?php
-require("sesionAdmin.php");
+include("sesionAdmin.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -78,6 +78,9 @@ require("sesionAdmin.php");
     </div>
         </div>
     </div>
+    <form action="" method="POST">
+        <button name="cierre">Cierre de la sesión</button>
+    </form>
     <?php
     include("pie.php")
     ?>

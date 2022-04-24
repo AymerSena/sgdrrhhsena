@@ -8,9 +8,10 @@ if(!isset($_SESSION['rol'])){
     }
 }
 
-if(isset($_POST["cerrar_sesion"])){
+if(isset($_POST["cierre"])){
     session_unset(); 
     session_destroy(); 
     header('location: Index.php');
 }
+
 ?>
