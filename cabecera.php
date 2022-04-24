@@ -12,9 +12,9 @@
     <link rel="stylesheet" href="../CSS/submenu.css">
 </head>
 <body>
-<?php 
+<?php
                     require("conexionBD.php");
-                    $documentoFunLoguea=1110000001;/// Esta variable debe capturar quien se logueo por el momento se pone manual.
+                    $documentoFunLoguea=$_SESSION["idUs"];
                     $query=$conexion->query("SELECT * FROM tblusuario WHERE UsuCedula='$documentoFunLoguea'");
                     while ($row = $query->fetch_assoc()) {
                         $return = $row['UsuFotoPerfil'];
@@ -28,7 +28,7 @@
             <ul>
                 <li>
                     <div class="photousu">
-                        <img src="<?php echo $return;?>" alt="">
+                       <img src="<?php echo $return;?>" alt="">
                     </div>
                     <span class="user_name">User name</span>
                 </li>
@@ -89,14 +89,13 @@
                     </a>
                 </li>
                 <li>
-                    <a href="Index.php">
+                    <a href="auxCierrLogin.php">
                         <span class="icon">
                             <ion-icon name="log-out-outline"></ion-icon>
                             </ion-icon>
                         </span>
-                        <form action="" method="$_POST">
                         <span class="text" name="cierre">Cerrar Sesión</span>
-                        </form>
+                        
                     </a>
                 </li>
             </ul>
@@ -107,6 +106,21 @@
                     <ion-icon name="menu-outline"></ion-icon>
                 </div>
                 <div class="title">
-                    <h1>Menu empleado</h1>
+                    <?php
+                    switch ($_SESSION["rol"]) {
+                        case 1:
+                            echo "<h1>Menu Administrador</h1>";
+                            break;
+                        case 2;
+                            echo "<h1>Menu Jefe</h1>";
+                            break;
+                        case 3;
+                            echo "<h1>Menu empleado</h1>";
+                            break;
+                        default:
+                            echo "Algo paso, por favor contacte al administrador del sistema error en codigo"; 
+                            break;
+                    }
+                    ?>
                 </div>
             </div>
