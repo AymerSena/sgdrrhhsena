@@ -34,6 +34,7 @@ require("sesionJefe.php");
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="">
 <meta name="author" content="">
+<link rel="stylesheet" href="CSS/plantillaConten.css">
 <title>Unix Strongest </title>
 
 <!-- Bootstrap core CSS
@@ -63,7 +64,9 @@ function BorrarRegistro() {
 
 <body>
 <!-- Begin page content -->
-
+<?php
+    include("cabecera.php");
+?>
 <div class="container">
   <h3 class="mt-5">Creación de medios evaluativos</h3>
   <hr>
@@ -112,5 +115,8 @@ function BorrarRegistro() {
 <!-- Placed at the end of the document so the pages load faster --> 
 
 <script src="dist/js/bootstrap.min.js"></script>
+<?php
+    include("pie.php");
+    ?>
 </body>
 </html>

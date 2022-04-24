@@ -3,7 +3,7 @@ session_start();
 if(!isset($_SESSION['rol'])){
     header('location: Index.php');
 }else{
-    if($_SESSION['rol'] != 3){
+    if($_SESSION['rol'] != 2){
         header('location: Index.php');
     }
 }

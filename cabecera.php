@@ -1,3 +1,6 @@
+<?php
+include("constaVari.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,6 +25,12 @@
                     if ($return==NULL){
                         $return="https://1.bp.blogspot.com/-MeCxaLO8njU/YT5yRMu7KrI/AAAAAAAAAHI/NhoZIlmquMUWDoiVjAzF3nTF1WnwqRTSQCNcBGAsYHQ/s0/descarga.png";
                     }
+                    // Capturar el nombre del usuario
+                    $queryName="SELECT UsuNombre, UsuApellido FROM tblusuario WHERE usuCedula='$documentoFunLoguea'";
+                    $resulName= $conexion -> query($queryName);
+                    foreach ($resulName as $fila) {
+                        $nombreUsu = $fila["UsuNombre"]." ".$fila["UsuApellido"];
+                    }
                     ?>
     <div class="container">
         <div class="navigation">
@@ -30,7 +39,7 @@
                     <div class="photousu">
                        <img src="<?php echo $return;?>" alt="">
                     </div>
-                    <span class="user_name">User name</span>
+                    <span class="user_name"><?php echo $nombreUsu; ?></span>
                 </li>
                 <li>
                     <a href="#">
@@ -81,7 +90,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="../changepassw.php">
+                    <a href="<?php echo $cambioContra ?>">
                         <span class="icon">
                             <ion-icon name="lock-closed-outline"></ion-icon>
                         </span>
@@ -109,13 +118,13 @@
                     <?php
                     switch ($_SESSION["rol"]) {
                         case 1:
-                            echo "<h1>Menu Administrador</h1>";
+                            echo "<h1>Administrador</h1>";
                             break;
                         case 2;
-                            echo "<h1>Menu Jefe</h1>";
+                            echo "<h1>Lider</h1>";
                             break;
                         case 3;
-                            echo "<h1>Menu empleado</h1>";
+                            echo "<h1>Colaborador</h1>";
                             break;
                         default:
                             echo "Algo paso, por favor contacte al administrador del sistema error en codigo"; 

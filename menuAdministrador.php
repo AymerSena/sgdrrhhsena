@@ -8,44 +8,15 @@ include("sesionAdmin.php");
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/cssmenuAdmin.css">
+    <link rel="stylesheet" href="CSS/plantillaConten.css">
     <title>Menu Administrador</title>
 </head>
 
 <body>
-<!-- Desde acá -->
 <?php
-    include("cabecera.php")
-    
-/*
-                    require("conexionBD.php");
-                    $documentoFunLoguea=1110000001;/// Esta variable debe capturar quien se logueo por el momento se pone manual.
-                    $conUrl="SELECT UsuFotoPerfil FROM tblusuario WHERE UsuCedula=1110000001";
-                    $query=$conexion->query($conUrl);
-                    while ($row = $query->fetch_assoc()) {
-                        $return = $row['UsuFotoPerfil'];
-                    }
-                    if ($return==NULL){
-                        $return="https://1.bp.blogspot.com/-MeCxaLO8njU/YT5yRMu7KrI/AAAAAAAAAHI/NhoZIlmquMUWDoiVjAzF3nTF1WnwqRTSQCNcBGAsYHQ/s0/descarga.png";
-                    }
-*/
+    include("cabecera.php");
 ?>
 <div class="cuerpo">
-    <!--
-        <div class="panelLeft">
-            <nav>
-                <ul>
-                    <li><a href="photoPerfil.php"><img src="<?php echo $return; ?>" id="photoPer"></a></li>
-                    <li> <img src="https://1.bp.blogspot.com/-EO10WM7B0Ig/YT5yOT5S7JI/AAAAAAAAAGw/FfqaAQ19Y709UTCC9jBUt7CW9pEv8_xjACNcBGAsYHQ/s0/IconoNotificaciones.png" id="photoNoti"></li>
-                    <li><button>Gestion contraseña</button></li>
-                    <li><button><a href="index.php">Cerrar sesión</a></button></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="titlePag">
-            <h1>Titulo de la página va acá</h1>
-        </div>
-        -->
         <div class="container">
         <div id="Menu">
         <h1 id="tit">¿Que deseas hacer?</h1>
@@ -78,14 +49,9 @@ include("sesionAdmin.php");
     </div>
         </div>
     </div>
-    <form action="" method="POST">
-        <button name="cierre">Cierre de la sesión</button>
-    </form>
     <?php
-    include("pie.php")
+    include("pie.php");
     ?>
-   <!-- Hasta acá -->
-
 </body>
 
 </html>

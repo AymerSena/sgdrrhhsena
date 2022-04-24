@@ -9,8 +9,9 @@
 </head>
 <body>
     <?php
+    session_start();
     require("conexionBD.php");
-    $documento=1110000001;
+    $documento=$_SESSION["idUs"];
     $querySql = "SELECT * FROM tblusuario WHERE UsuCedula=$documento";
     $resultados = $conexion -> query($querySql);
     foreach ($resultados as $row) {
@@ -73,7 +74,7 @@ $rel=$conexion->query($query2SQL);
 while ($row = $rel->fetch_assoc()) {
     $return = $row['firmaUrl'];
 }
-if ($return==NULL){
+if ($return==""){
     $return="https://1.bp.blogspot.com/-MeCxaLO8njU/YT5yRMu7KrI/AAAAAAAAAHI/NhoZIlmquMUWDoiVjAzF3nTF1WnwqRTSQCNcBGAsYHQ/s0/descarga.png";
 }
 ?>

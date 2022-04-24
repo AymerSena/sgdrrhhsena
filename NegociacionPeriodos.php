@@ -1,38 +1,23 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/plantillaConten.css">
     <title>Document</title>
 </head>
 <body>
-
-
-
+<?php
+    include("cabecera.php");
+?>
 <div id="Menu">
-
         <form  action="" method="POST">
           <br>      
           <p>Seleccione el tipo de ausencia</p>
-<!----
-          <form action="">
-          <select name='ausencia'> 
-          <option disabled selected>- - - - - - - - - </option> 
-          <option value="Vacaciones">Vacaciones</option> 
-          <option value="Incapacidades">Incapacidades</option> 
-          <option value="Licencias No remuneradas">Licencias No remuneradas</option>
-          <option value="Licencias de maternidad">Licencias de maternidad</option>
-          <option value="Ley maria o licencia de paternidad">Ley maria o licencia de paternidad</option> 
-          <option value="Licencia por luto">Licencia por luto</option>
-          <option value="Beneficio por votación">Beneficio por votación</option>
-          <option value="Licencia por matrimonio">Licencia por matrimonio</option>
-          </select>
-
-          <button></button>
-           
-          </form> -->
-
           <form action="">
               <select name="ausencia" id="">
                   <option value="0">Seleccione</option>
@@ -52,11 +37,7 @@
           </div>
 
           <?php
-
-       
-
           if (isset($_POST['ausencia'])){
-              session_start();
               $_SESSION["tip"]=$_POST['ausencia'];
               echo $_SESSION["tip"];
             $TipoAusencia=$_SESSION["tip"];
@@ -137,27 +118,8 @@
           <br> 
             <?php  }?>
 
-
-        
-
-        <!--  <input type="submit" name="image" onclick="alert('Vacaciones solicitadas');"img id="vacaciones" src="Iconos_imagenes/IconoSolicitarVa.png" style="float: right;" value="solicitado"/>
-          
-          <h3>Ingrese fecha de partida</h3>
-          
-          <input type="date" name="date" id="date" >
-
-          <br>
-          <h3>Ingrese fecha de llegada </h3>
-          
-          <input type="date" name="dated" id="dated" >
-          
-           </form>
-          <br> 
-    
-        -->
-    
-
-
-
+        <?php
+    include("pie.php");
+    ?>
 </body>
 </html>
