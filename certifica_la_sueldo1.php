@@ -9,8 +9,9 @@
 </head>
 <body>
     <?php
+    session_start();
     require("conexionBD.php");
-    $documento=1110000001;
+    $documento=$_SESSION["idUs"];
     $querySql = "SELECT * FROM tblusuario WHERE UsuCedula=$documento";
     $resultados = $conexion -> query($querySql);
     foreach ($resultados as $row) {
@@ -37,7 +38,7 @@
 <h2>UNIX STRONGEST S.A.S</h2>
 <h2>CERTIFICA QUE:</h2> <br><br><br><br>
 <blockquote>
-<p>El (la) Señor(a) <?php echo $namePersonJob;?>, identificado(a) con CC No. <?php echo $documento?> de <br>
+<p>El (la) Señor(a) <?php echo $namePersonJob." ".$lastNamePerJob;?>, identificado(a) con CC No. <?php echo $documento?> de <br>
 BOGOTA D.C., está vinculad(a) a la compañía desde el día <?php echo $fechaContrato;?>, con un <br>
 contrato de trabajo a <?php echo $tipoContrato; ?>. Actualmente se desempeña en el cargo de <br>
 <?php echo $cargoJobFun;?>. <br><br><br><br>
