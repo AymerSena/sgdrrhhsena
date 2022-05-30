@@ -43,6 +43,9 @@ include("sesionAdmin.php");
                 <li>
                     <a href="certi.php">Generar certificados</a>
                 </li>
+                <li>
+                    <a href="gestionPassword.php">Gestion de contraseñas empleados</a>
+                </li>
             </ul>
         </nav>
         <img src="https://1.bp.blogspot.com/-CRGFBvE8s8k/YT5yRhIEj8I/AAAAAAAAAHM/dplt4qgxJmcjfSP213rWRyF0EoW_BQlSACNcBGAsYHQ/s332/logoPag.png" id="logoUnix">

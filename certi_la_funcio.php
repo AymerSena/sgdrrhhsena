@@ -38,24 +38,60 @@
 <h2>UNIX STRONGEST S.A.S</h2>
 <h2>CERTIFICA QUE:</h2> <br><br><br><br>
 <blockquote>
-<p>El (la) Señor(a) <?php echo $namePersonJob." ".$lastNamePerJob;?>, identificado(a) con CC No. <?php echo $documento?> de <br>
+<p>El (la) Señor(a) <?php echo $namePersonJob;?>, identificado(a) con CC No. <?php echo $documento?> de <br>
 BOGOTA D.C., está vinculad(a) a la compañía desde el día <?php echo $fechaContrato;?>, con un <br>
 contrato de trabajo a <?php echo $tipoContrato; ?>. Actualmente se desempeña en el cargo de <br>
 <?php echo $cargoJobFun;?>. <br><br><br><br>
 El presente certificado se expide a solicitud del interesado(a) el 03 de marzo de 2022, en la <br>
 ciudad de BOGOTA D.C.. <br><br><br><br>
+<h2>El funcionario tiene las siguientes funciones correspondientes al cargo</h2>
+<table id="tblfun">
+    <tr>
+        <th>FUNCIÓN</th>
+        <th>DESCRIPCIÓN</th>
+    </tr>
+    
+<?php
+$query2SQL="SELECT * FROM tblfuncionescar WHERE FunForUsuDocumen=$documento";
+$ruslts = $conexion ->query($query2SQL);
+foreach($ruslts as $inte){
+    ?>
+    <tr>
+        <td><?php echo $inte["FunTitulo"]?></td>
+        <td><?php echo $inte["FunDescripcion"]?></td>
+    </tr>
+    <?php
+}
+?>
+</table><br><br>
 Atentamente,</p> <br><br><br>
 
-<?php // Se debe generar la firma trayendola desde la base de datos, agregar el campo en la base de datos y el repositorio. ?>
-<img src="https://vapor-us-east-1-dev-uploads-1603425924.s3.amazonaws.com/sample/8fccc6014f64d1cadd296467befcb17a-Firma-8.png" alt="" name="firm">
+
+
+<?php 
+$querySS="SELECT * FROM tblfirmas WHERE firmaUsuDocu=1110000001";
+$rel=$conexion->query($query2SQL);
+while ($row = $rel->fetch_assoc()) {
+    $return = $row['firmaUrl'];
+}
+if ($return==""){
+    $return="https://1.bp.blogspot.com/-MeCxaLO8njU/YT5yRMu7KrI/AAAAAAAAAHI/NhoZIlmquMUWDoiVjAzF3nTF1WnwqRTSQCNcBGAsYHQ/s0/descarga.png";
+}
+?>
+<img src="<?php echo $urlFim; ?>" alt="" name="firm">
 <p><?php echo $nameFirmante; ?><br>
 <?php echo $cargoFirmante; ?></p>
 </blockquote>
+
+
 </div>
+
 <input type='button' value='Imprimir' onClick='window.print(certificado)'; class='noimp'/>
 
 <?php
 
 ?>
+
+
 </body>
 </html>

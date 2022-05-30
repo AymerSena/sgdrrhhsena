@@ -1,6 +1,3 @@
-<?php
-require("sesionJefe.php");
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +12,7 @@ require("sesionJefe.php");
   
 </body>
 <?php
-require("conexionBD.PHP");// conexion a BD
+$conexion = mysqli_connect("localhost","root","","sgdrrhhbd");// conexion a BD
 if ($conexion -> connect_error){
  //echo "Conexion errada";
 }else{

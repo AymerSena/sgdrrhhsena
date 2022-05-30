@@ -50,7 +50,7 @@ include("constaVari.php");
                     </a>
                 </li>
                 <li>
-                    <a href="../datosbasicos.php">
+                    <a href="datosBasicos.php">
                         <span class="icon">
                             <ion-icon name="person-outline"></ion-icon>
                         </span>
@@ -58,7 +58,7 @@ include("constaVari.php");
                     </a>
                 </li>
                 <li>
-                    <a href="../submenucddocs.php">
+                    <a href="index_documento.php">
                         <span class="icon">
                             <ion-icon name="document-attach-outline"></ion-icon>
                         </span>
@@ -66,7 +66,7 @@ include("constaVari.php");
                     </a>
                 </li>
                 <li>
-                    <a href="../submenuvacaciones.php">
+                    <a href="submenuvacaciones.php">
                         <span class="icon">
                             <ion-icon name="airplane-outline"></ion-icon>
                         </span>
@@ -74,7 +74,7 @@ include("constaVari.php");
                     </a>
                 </li>
                 <li>
-                    <a href="../submenuevalu.php">
+                    <a href="submenuevalu.php">
                         <span class="icon">
                             <ion-icon name="clipboard-outline"></ion-icon>
                         </span>
@@ -82,7 +82,7 @@ include("constaVari.php");
                     </a>
                 </li>
                 <li>
-                    <a href="../submenuinfor.php">
+                    <a href="submenuinfor.php">
                         <span class="icon">
                             <ion-icon name="stats-chart-outline"></ion-icon>
                         </span>
@@ -116,6 +116,7 @@ include("constaVari.php");
                 </div>
                 <div class="title">
                     <?php
+                    // session_start();
                     switch ($_SESSION["rol"]) {
                         case 1:
                             echo "<h1>Administrador</h1>";
