@@ -69,8 +69,13 @@ if (isset($_POST["iniciarSesion"])) {
         
         </form>
     </section>
+    <!--subido... linea de texto -->
 </body>
 <?php
+
+
+
+
 /*
 //Codigo de David.
 if (isset($_POST['Iniciarsesion'])) {
