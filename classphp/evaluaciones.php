@@ -2,11 +2,12 @@
 require_one("./conexionBD.php");
 class evaluaciones{
 
-    public function construct__($eNam,$eDes,$eAre){
-        private $idEval = insertEval();
+    private $idEval = insertEval();
         public $nombreEva;
         public $descriEva;
         public $keyArea;
+    public function construct__($eNam,$eDes,$eAre){
+        
      $nombreEva = $this -> eNam;
      $descriEva = $this -> eDes;
      $keyArea = $this -> eAre;
