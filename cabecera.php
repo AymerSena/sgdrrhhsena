@@ -82,7 +82,7 @@ include("constaVari.php");
                     </a>
                 </li>
                 <li>
-                    <a href="submenuinfor.php">
+                    <a href="menuInformes.php">
                         <span class="icon">
                             <ion-icon name="stats-chart-outline"></ion-icon>
                         </span>
