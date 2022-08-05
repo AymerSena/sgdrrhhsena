@@ -9,6 +9,7 @@
 </head>
 <body>
     <?php
+    
     session_start();
     require("conexionBD.php");
     $documento=$_SESSION["idUs"];

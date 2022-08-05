@@ -1,5 +1,5 @@
 <?php
-session_start();
+require("sesionCompartida.php");
 require("conexionBD.php");
 ?>
 <!DOCTYPE html>
@@ -18,12 +18,12 @@ require("conexionBD.php");
     <h2>Menú de certificados</h2>
     <div id="menu">
         <ul>
-            <li><a href="certifica_la_sueldo1.php">Certificado laboral con sueldo.</a></li>
+            <li><a href="certificadoConSueldo.php" target="_blank">Certificado laboral con sueldo.</a></li>
             <li><a href="">Certificado laboral Embajadas</a></li>
-            <li><a href="certi_la_funcion.php">Certificado laboral Salario Promedio</a></li>
-            <li><a href="certi_la_sueldo_funcion.php">Certificado laboral con sueldo y con funciones</a></li>
-            <li><a href="">Certificado laboral sin sueldo y con funciones</a></li>
-            <li><a href="">Certificado laboral sin sueldo</a></li>
+            <li><a href="certi_la_funcion.php" target="_blank">Certificado laboral Salario Promedio</a></li>
+            <li><a href="laboralFuncionesSueldo.php" target="_blank">Certificado laboral con sueldo y con funciones</a></li>
+            <li><a href="laboralFuncionesNSueldo.php" target="_blank">Certificado laboral sin sueldo y con funciones</a></li>
+            <li><a href="certificadoLabsinSuel.php" target="_blank">Certificado laboral sin sueldo</a></li>
             <li><a href="">Carta descriptiva</a></li>
         </ul>
     </div>

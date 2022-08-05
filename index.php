@@ -65,8 +65,6 @@ if (isset($_POST["iniciarSesion"])) {
             <input type="password" placeholder="Contrasena" name="contrasena"><br><br>
             <button id="boton" type="submit" name="iniciarSesion">Iniciar sesión</button><br><br>
             <button id="boton1" type="submit" name="resContrasena">Restablecer contraseña</button><br><br>
-            <a href="<?php echo $menuAdmin?>">Direcionar al menú administrador</a>
-        
         </form>
     </section>
     <!--subido... linea de texto -->
