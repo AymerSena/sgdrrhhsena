@@ -1,5 +1,6 @@
 <?php
 include("constaVari.php");
+//require("sesionCompartida.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">

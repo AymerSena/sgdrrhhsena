@@ -4,7 +4,10 @@ if(!isset($_SESSION['rol'])){
     header('location: Index.php');
 }else{
     if($_SESSION['rol'] != 3){
-        header('location: Index.php');
+        
+        session_unset(); 
+    session_destroy(); 
+    header('location: Index.php');
     }
 }
 

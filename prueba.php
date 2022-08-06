@@ -7,12 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    <?php
-    include("cabecera.php")
-    ?>
-    <h1>si</h1>
-    <?php
-    include("pie.php")
-    ?>
+    <h1>Prueba de impresion pagina </h1>
+    <p>Con descripción de pruebas.</p>
+
+    <img src="https://1.bp.blogspot.com/-nNS8P3RkkaM/YT5yRKlqa5I/AAAAAAAAAHE/cATU1oWOVOcE8r1RrfberpZ1haJ5vywvgCNcBGAsYHQ/s320/Logo.png" alt="">
 </body>
 </html>
