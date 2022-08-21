@@ -41,6 +41,9 @@ if (isset($_POST["iniciarSesion"])) {
     }
 }
 
+if (isset($_POST["resContrasena"])) {
+    header("Location: restInterPasword.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

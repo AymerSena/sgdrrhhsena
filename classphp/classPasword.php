@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 <?php
 require("conexionBD.php");
-class generarAreEmp()
+class generarAreEmp
 {
     function queryEmAr($area){
         $getQuery="SELECT * FROM tblusuario WHERE UsuForaArea = '$area'"
@@ -25,7 +25,7 @@ class generarAreEmp()
 =======
 <?php
 require("conexionBD.php");
-class generarAreEmp()
+class generarAreEmp
 {
     function queryEmAr($area){
         $getQuery="SELECT * FROM tblusuario WHERE UsuForaArea = '$area'"
@@ -46,5 +46,5 @@ class generarAreEmp()
     }
 }
 
->>>>>>> a45349979232ba91000f12d0a931ad6d8a47343d
+
 ?>
