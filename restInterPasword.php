@@ -1,13 +1,3 @@
-<?php
-require("classphp/restPasword.php");
-require("conexionBD.php");
-
-if (isset($_POST["validar"]) {
-    $sentSQL = "SELECT Usu"
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +8,7 @@ if (isset($_POST["validar"]) {
 </head>
 <body>
     <h1>Validación y restablecimiento de contraseña</h1>
-    <form action="" method="post">
+    <form action="interCambioCont.php" method="post">
         <label for="documento">No. de documento registrado:</label>
         <input type="num" name="id"> <br>
         <label for="pregunta1" >No. celular registrado</label>
