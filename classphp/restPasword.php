@@ -2,7 +2,7 @@
 class restPasword{
 
     public function validarContraseña($a, $b, $c, $d){
-        require("../conexionBD.php");
+        require("./conexionBD.php");
         $sentenciaSQL="SELECT * FROM tblusuario WHERE UsuCedula=$d";
         $runQuery=$conexion->query($sentenciaSQL);
         $registro= $runQuery -> fetch_array();
@@ -12,10 +12,10 @@ class restPasword{
         }else{
             $validacion=false;
         }
-return $validacion;
+return $validacion; 
     }
     public function cambioContra($c1,$c2,$d){
-        require("../conexionBD.php");
+        require("./conexionBD.php");
         $mensaje="Sin parametros";
             if ($c1==$c2) {
                 $sentSQL="UPDATE tblusuario SET UsuContrasenaSis=$c1 WHERE UsuCedula=$d";

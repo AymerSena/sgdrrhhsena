@@ -26,7 +26,7 @@ include("sesionAdmin.php");
       <th>Área</th>
       <th>Descripcions</th>
       <th>Lider o director área</th>
-       <th> <a href="nuevo_prod1.php"> <button type= "button" class="btn btn-info">Nuevo</button> </a> </th>
+       <th> <a href="crearArea.php"> <button type= "button" class="btn btn-info">Nuevo</button> </a> </th>
 
 
        <?php
