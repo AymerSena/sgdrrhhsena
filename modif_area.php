@@ -47,12 +47,9 @@ $runSql2= $conexion -> query($senSQL2);
                 ?>
             
         </select>
-
-
-        <button type="submit">Guardar</button>
-
+        <button type="submit" name="submit">Guardar</button>
     </form>
-
+<button><a href="areasOrga.php">Volver</a></button>
 
 </div>
 

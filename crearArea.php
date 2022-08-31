@@ -6,11 +6,7 @@ if (isset($_POST["save"])) {
     $creaObej = $instanciar->crear($_POST["nameAre"], $_POST["docResp"], $_POST["descAre"],); 
 }
 if (isset($_POST["volver"])) {
-    ?>
-    <script>
-        windows.location.href="areasOrga.php";
-    </script>
-    <?php
+    header("Location: areasOrga.php");
 }
 ?>
 <!DOCTYPE html>
