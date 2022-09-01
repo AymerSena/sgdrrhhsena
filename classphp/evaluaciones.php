@@ -1,39 +1,19 @@
 <?php
-require_one("./conexionBD.php");
-class evaluaciones{
+class evaluaciones {
+    public function crearEvaluacion($na,$des,$ar){
+        require("./conexionBD.php");
+        $sentSQL="INSERT INTO tblevaluaciones (EvaNombre,EvaDescripcion,EvaForArea) VALUES ('$na','$des','$ar')";
+        $runSent=$conexion->query($sentSQL);
+        $secondSQL="SELECT EvaCodigo FROM tblevaluaciones WHERE EvaNombre=$na AND EvaDescripcion=$des AND EvaForArea=$ar";
+        $idRegistro=$conexion->query($secondSQL);
+        return $idRegistro;
 
-    public function construct__($eNam,$eDes,$eAre){
-        private $idEval = insertEval();
-        public $nombreEva;
-        public $descriEva;
-        public $keyArea;
-     $nombreEva = $this -> eNam;
-     $descriEva = $this -> eDes;
-     $keyArea = $this -> eAre;
     }
-
-    public function insertEval(){
-     $this -> nombreEva;
-     $this -> descriEva;
-     $this -> keyArea;
-
-        $sql = "INSERT INTO tblevaluaciones VALUES (NULL, '$nombreEva','$nombreEva','$descriEva','$keyArea')";
-        $runInsert = $conexion ->query($sql);
-        $querId="SELECT EvaCodigo FROM tblevaluaciones WHERE EvaCodigo=(SELECT max(EvaCodigo) FROM tblevaluaciones)";
-        $result=$conexion ->query($querId);
-        return $result;
+    public function consultarPorArea($a){
+        require("./conexionBD.php");
+        $senteSQL="SELECT * FROM tblevaluaciones WHERE EvaForArea=$a";
+        $resultados=$conexion->query($senteSQL);
+        return $resultados;
     }
-
-    public function searchEval($a){
-        $sql = "SELECT * FROM tblevaluaciones WHERE EvaForAre = '$a'";
-        $runSelect = $conexion -> query($sql);
-        return $runSelect;
-    }
-
-    public function updateEval($a,$b, $c, ){´
-    
-    }
-
 }
-
 ?>

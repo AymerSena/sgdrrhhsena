@@ -33,7 +33,7 @@ require("sesionJefe.php");
                     <a href="SolicitudEmpleado.php"><img class="logo" src="https://1.bp.blogspot.com/-CVbG8VMJUGg/YT5yP3LJHnI/AAAAAAAAAG8/oSqBcKNbMWcH6gM4eXFSKPc2TC3Mm0rJgCNcBGAsYHQ/s320/IconoSolicitarYConsuVa.png"></a>
                 </li>
                 <li>
-                    <a href="moduloEvalucion.html"><img class="logo" src="https://1.bp.blogspot.com/-DFzD5Wp_k1I/YT5yJ1ibjFI/AAAAAAAAAGM/J3uFXohr1YY49BYHDVROIISKXNJ3XvDGACNcBGAsYHQ/s320/IconoCrearEvaP.png"></a>
+                    <a href="gestionEvaluaciones.php"><img class="logo" src="https://1.bp.blogspot.com/-DFzD5Wp_k1I/YT5yJ1ibjFI/AAAAAAAAAGM/J3uFXohr1YY49BYHDVROIISKXNJ3XvDGACNcBGAsYHQ/s320/IconoCrearEvaP.png"></a>
                 </li><br> <br>
                 <li>
                     <a href="evaluarEmp.html"><img class="logo" src="https://1.bp.blogspot.com/-Zxks8ycBOc0/YT5yM4bZqzI/AAAAAAAAAGk/WdnOOm982uULk6R7qeFviWx68IABXBDcQCNcBGAsYHQ/s0/IconoEvaluaciones.png"></a>
