@@ -43,6 +43,20 @@ require("sesionAdmin.php");
                         <?php
                     }
                     ?>
+                </select><br>
+                <label for="">Área</label>
+                <select name="area" id="">
+                    <option value="error">Seleccione</option>
+                    <?php
+                    require("conexionBD.php");
+                    $consulta="SELECT * FROM tblarea";
+                    $result=$conexion->query($consulta);
+                    foreach($result as $row){
+                        ?>
+                        <option value="<?php echo $row['AreCodigo']; ?>"><?php echo $row['AreNombre'];?></option>
+                        <?php
+                    }
+                    ?>
                 </select><br><br>
                 <button name="enviar">Crear usuario</button>
                 <button><a href="menuAdministrador.php">Volver al menú</a></button>
@@ -63,8 +77,9 @@ if ($_POST) {
     $apellido=$_POST["lastN"];
     $contrasenatmp=$_POST["contrasena"];
     $perfilas=$_POST["perfil"];
+    $areaAsignado=$_POST["area"];
 
-    $consulInsr="INSERT INTO tblusuario(UsuCedula,UsuNombre,UsuApellido,UsuContrasenaSis,UsuForaPerfil ) VALUES('$documentoP','$nombre','$apellido','$contrasenatmp','$perfilas')";
+    $consulInsr="INSERT INTO tblusuario(UsuCedula,UsuNombre,UsuApellido,UsuContrasenaSis,UsuForaPerfil,UsuForaArea ) VALUES('$documentoP','$nombre','$apellido','$contrasenatmp','$perfilas','$areaAsignado')";
     $enviar=$conexion->query($consulInsr);
     echo "Se ha creado un nuevo usuario";
 }

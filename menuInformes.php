@@ -20,7 +20,11 @@ session_start();
             <h1>Menú de informes</h1>
         </div>
         <div class="container">
+<<<<<<< HEAD
+            <button class="buttonCont" onclick="location.href='informeNomina.php'">Rendimiento nomina</button>
+=======
             <button class="buttonCont" onclick="location.href='informeNomina.php'">Rendimiento de Nomina</button>
+>>>>>>> a901e93495416ac675d403703fdf9c84824f6994
             <button class="buttonCont" onclick="location.href='vacaciInforme.php'">Informe de vacaciones</button>
             <button class="buttonCont" onclick="location.href='infoResulEvalua.php'">Resultados evaluativos</button>
             <button class="buttonCont" onclick="location.href='certi.php'">Certificados</button>

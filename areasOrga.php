@@ -50,7 +50,7 @@ echo "</tr>";
 }
 ?>
 </table>
-
+<button><a href="menuAdministrador.php">Volver al menú</a></button>
 </div>
 <?php
     include("pie.php");

@@ -5,6 +5,7 @@ require("conexionBD.php");
 $doc=$_SESSION["idUs"];
 $sentSql="SELECT UsuForaArea FROM tblusuario WHERE UsuCedula='$doc'";
 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,15 +37,17 @@ $creadoOb= $obje->consultarPorArea($data[0]);
 foreach ($creadoOb as $row) {
     echo "<td>". $row["EvaNombre"]."</td>"; 
     echo "<td>". $row["EvaDescripcion"]."</td>";
-    echo "<td>"."Modificar"."</td>";
-    echo "<td>"."Eliminar"."</td>";
+    echo "<td> <a href='modifEva.php?no=" .$row["EvaCodigo"]." type= 'button' class='btnbtn-danger' >Modificar</button></a> </td>";
+    echo "<td> <a href='eliminarEvaluCri.php?no=" .$row["EvaCodigo"]." type= 'button' class='btnbtn-danger' >Eliminar</button></a> </td>";
     echo "</tr>";
 }
 ?>
 </tr>
 </table>
-<br>
 <button><a href="newEvalu.php?idAre=<?php echo $data[0];?>">Crear nueva evaluación</a></button>
+<button></button>
+<br>
+
     </div>
     <?php
     include("pie.php");
