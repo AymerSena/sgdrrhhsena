@@ -8,7 +8,7 @@ if (isset($_POST["guardar"])) {
     $val=$_POST["valor"];
     $obj = new criteriosEvaluativos();
     $res = $obj->crearPreguna($cri,$val,$evalID);
-    header("Location: modifEval.php?no=$evalID");
+    header("Location: modifEva.php?no=$evalID");
 }
 
 ?>

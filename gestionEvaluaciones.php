@@ -45,7 +45,7 @@ foreach ($creadoOb as $row) {
 </tr>
 </table>
 <button><a href="newEvalu.php?idAre=<?php echo $data[0];?>">Crear nueva evaluación</a></button>
-<button></button>
+<button><a href="menuJefe.php">Regresar al menú</a></button>
 <br>
 
     </div>
