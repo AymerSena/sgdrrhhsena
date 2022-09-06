@@ -1,6 +1,7 @@
 <?php
 require("sesionJefe.php");
 require("classphp/evaluaciones.php");
+require("classphp/criteriosEvaluativos.php");
 require("conexionBD.php");
 
 $idEva=$_GET["no"];
@@ -10,9 +11,14 @@ $sentSql="SELECT UsuForaArea FROM tblusuario WHERE UsuCedula='$doc'";
 if (isset($_POST["guardar"])) {
     $obje= new evaluaciones();
     $data= $obje->modificarEvaluacion($_POST["name"],$_POST["decripcion"],$idEva);
+    header("Location: gestionEvaluaciones.php");
 }
 if (isset ($_POST["volver"])) {
     header("Location: gestionEvaluaciones.php");
+}
+
+if (isset($_POST["newCri"])) {
+    header("Location: newCri.php?no=$idEva");
 }
 ?>
 <!DOCTYPE html>
@@ -41,8 +47,33 @@ if (isset ($_POST["volver"])) {
             echo $data1[2];
             ?>
             "><br>
-            <button name="guardar">Guardar y cerrar</button>
-            <button name="volver">Volver</button>
+        <br>
+        <hr>
+        <h2>Criterios evaluactivos asociados.</h2>
+        <table>
+
+<thead>
+    <th>Criterio evaluativo</th>
+    <th>Valor peso del criterio</th>
+</thead>
+<?php
+$dataCons=new criteriosEvaluativos();
+$dataGen = $dataCons->consultarAreaEva($idEva);
+foreach ($dataGen as $row) {
+echo "<tr>";
+echo "<td>".$row["CriPregunta"]."<td>";
+echo "<td>".$row["CriValorPreg"]."<td>";
+echo "<td> <a href='modiCrite1.php?no=" .$row["CriCodigo"]." type= 'button' class='btnbtn-danger' >Modificar</button></a> </td>";
+echo "<td> <a href='elimiCri1.php?no=" .$row["CriCodigo"]." type= 'button' class='btnbtn-danger' >Eliminar</button></a> </td>";
+echo "</tr>";
+}
+
+?>
+</table>
+
+        <button name="newCri">Agregar criterio</button>    
+        <button name="volver">Volver</button>
+        <button name="guardar">Guardar y cerrar</button>
         </form>
     </div>
     <?php

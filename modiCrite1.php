@@ -1,22 +1,27 @@
 <?php
 require("sesionJefe.php");
 require("classphp/criteriosEvaluativos.php");
+require("classphp/evaluaciones.php");
 $idCriterio= $_GET["no"];
 $obje = new criteriosEvaluativos();
 $data = $obje->consultarIdCri($idCriterio);
 foreach ($data as $row) {
     $cri=$row["CriPregunta"];
     $val=$row["CriValorPreg"];
+    $eval=$row["CriForeEvaluacion"];
 }
 if (isset($_POST["actualizar"])) {
     $cri1=$_POST["criterio"];
     $val1=$_POST["valor"];
     $obje1= new criteriosEvaluativos();
     $data1 = $obje1->modificarPregunta($cri1,$val1,$idCriterio);
-    header("Location: crearPreguntas.php");
+    $obje2 = new evaluaciones();
+    $data2 = $obje2 ->consultarPorId($eval);
+    $dataR = $data2-> fetch_array();
+    header("Location: modifEva.php?no=$dataR[0]");
 }
 if (isset($_POST["volver"])) {
-    header("Location: crearPreguntas.php");
+    header("Location: modifEva.php");
 }
 ?>
 <!DOCTYPE html>
