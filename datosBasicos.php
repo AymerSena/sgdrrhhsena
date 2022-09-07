@@ -1,8 +1,4 @@
 <?php
-<<<<<<< HEAD
-session_start();
-=======
->>>>>>> codaym
 include("sesionCompartida.php");
 require("conexionBD.php");
 $idus = $_SESSION["idUs"];
@@ -17,11 +13,7 @@ foreach ($runQuery as $row ){
     $mail=$row["UsuCorreo"];
     $phone=$row["UsuTelefono"];
     $dataBir=$row["UsuFechaNaci"];
-<<<<<<< HEAD
-    $groupSan=$row["UsuTipoSangre"];
-=======
     $groupSan=$row["UsuTIpoSangre"];
->>>>>>> codaym
    
 }
 
@@ -39,11 +31,6 @@ foreach ($runQuery as $row ){
 
 <body>
 <?php
-<<<<<<< HEAD
-session_start();
-=======
-
->>>>>>> codaym
     include("cabecera.php");
 ?>
     <br>

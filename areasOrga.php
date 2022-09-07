@@ -50,11 +50,7 @@ echo "</tr>";
 }
 ?>
 </table>
-<<<<<<< HEAD
-
-=======
 <button><a href="menuAdministrador.php">Volver al menú</a></button>
->>>>>>> codaym
 </div>
 <?php
     include("pie.php");

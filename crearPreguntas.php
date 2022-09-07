@@ -1,7 +1,5 @@
 <?php
 require("sesionJefe.php");
-<<<<<<< HEAD
-=======
 require("classphp/criteriosEvaluativos.php");
 if (isset($_POST["terminar"])){
     header('location: gestionEvaluaciones.php');
@@ -9,7 +7,6 @@ if (isset($_POST["terminar"])){
 if (isset($_POST["volverE"])){
     header('location: gestionEvaluaciones.php');
 }
->>>>>>> codaym
 ?>
 
 <!DOCTYPE html>
@@ -30,31 +27,14 @@ if (isset($_POST["volverE"])){
     <label for="">Criterio evaluativo:</label>
     <input type="text" name="criPre"><br>
     <label for="">Peso o valor del criterio:</label>
-<<<<<<< HEAD
-    <input type="number" name="value"><br>x|
-    <button name="campoMas">Agregar pregunta</button> <!-- Para agregar un campo mas -->
-    <Button name="terminar">Terminar y guardar</BUtton>   
-=======
     <input type="number" name="value"><br>
     <button name="campoMas">Agregar pregunta</button> <!-- Para agregar un campo mas -->
     <Button name="terminar">Terminar y guardar</BUtton>
->>>>>>> codaym
     <?php
     if (isset($_POST["campoMas"])) {
         $obje = new criteriosEvaluativos();
         $creado = $obje->crearPreguna($_POST["criPre"],$_POST["value"],$_SESSION["asoEva"]);
     }
-<<<<<<< HEAD
-    ?>
-   </form>
-<?php
-include("tablaCreacionPreg.php");
-?>
-
-
-
-
-=======
 
     ?>
    </form>
@@ -78,7 +58,6 @@ echo "<td> <a href='elimiCri.php?no=" .$row["CriCodigo"]." type= 'button' class=
 ?>
 </table>
 <button name="volverE">Volver</button>
->>>>>>> codaym
 </div>
     <?php
     include("pie.php");

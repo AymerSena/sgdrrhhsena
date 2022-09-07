@@ -43,8 +43,6 @@ require("sesionAdmin.php");
                         <?php
                     }
                     ?>
-<<<<<<< HEAD
-=======
                 </select><br>
                 <label for="">Área</label>
                 <select name="area" id="">
@@ -59,7 +57,6 @@ require("sesionAdmin.php");
                         <?php
                     }
                     ?>
->>>>>>> codaym
                 </select><br><br>
                 <button name="enviar">Crear usuario</button>
                 <button><a href="menuAdministrador.php">Volver al menú</a></button>
@@ -80,14 +77,9 @@ if ($_POST) {
     $apellido=$_POST["lastN"];
     $contrasenatmp=$_POST["contrasena"];
     $perfilas=$_POST["perfil"];
-<<<<<<< HEAD
-
-    $consulInsr="INSERT INTO tblusuario(UsuCedula,UsuNombre,UsuApellido,UsuContrasenaSis,UsuForaPerfil ) VALUES('$documentoP','$nombre','$apellido','$contrasenatmp','$perfilas')";
-=======
     $areaAsignado=$_POST["area"];
 
     $consulInsr="INSERT INTO tblusuario(UsuCedula,UsuNombre,UsuApellido,UsuContrasenaSis,UsuForaPerfil,UsuForaArea ) VALUES('$documentoP','$nombre','$apellido','$contrasenatmp','$perfilas','$areaAsignado')";
->>>>>>> codaym
     $enviar=$conexion->query($consulInsr);
     echo "Se ha creado un nuevo usuario";
 }
