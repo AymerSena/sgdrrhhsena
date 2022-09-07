@@ -1,4 +1,7 @@
 <?php
+require("sesionJefe.php");
+?>
+<?php
 if (isset($_POST["botonenvio"])){
     if (!empty($_POST["documentoEvaEm"]) && strlen($_POST["documentoEvaEm"]) <=10 && is_numeric($_POST["documentoEvaEm"]) && preg_match("/[0-9]/" , $_POST["documentoEvaEm"])){
         echo $_POST["documentoEvaEm"] . "<br/>";
