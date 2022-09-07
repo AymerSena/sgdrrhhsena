@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 session_start();
 ?>
 <!DOCTYPE html>
@@ -16,6 +17,8 @@ session_start();
 ?>
 
 <?php
+=======
+>>>>>>> codaym
     require("conexionBD.php");
 
     $fechaparti=$_POST['date'];
@@ -94,12 +97,20 @@ $finaly= $hoy->format('Y-m-d');
 
 $vacaciones= CalcuDias($finaly,$contrato);
 
+<<<<<<< HEAD
 
 $TipoAusencia= $_SESSION["tip"];
 /*echo   $_SESSION["tip"]  ."<--- Tipo de ausensia " . "  por la variable --> ".$TipoAusencia."<- esta si es si si 100 real no feik"; */
 $documento=$_SESSION["idUs"];
     $querySql = "SELECT * FROM tblusuario WHERE UsuCedula=$documento";
 $sql= "INSERT INTO `tblausencias`(`AusForTipAus`, `AusFechaInicio`, `AusFechaRegreso`, `AusFechaSolicitud`, `AusEstado`, `AusFechaInterr`, `AusForUsuCed`, `AusDiasSolici`, `AusDocumen`) VALUES ( '$TipoAusencia', '$fechaparti', '$fechasoli', '$finaly', 'Solicitado','$fechasoli' , $documento, '$miContador', 'subido')";
+=======
+session_start();
+$TipoAusencia= $_SESSION["tip"];
+/*echo   $_SESSION["tip"]  ."<--- Tipo de ausensia " . "  por la variable --> ".$TipoAusencia."<- esta si es si si 100 real no feik"; */
+
+$sql= "INSERT INTO `tblausencias`(`AusForTipAus`, `AusFechaInicio`, `AusFechaRegreso`, `AusFechaSolicitud`, `AusEstado`, `AusFechaInterr`, `AusForUsuCed`, `AusDiasSolici`, `AusDocumen`) VALUES ( '$TipoAusencia', '$fechaparti', '$fechasoli', '$finaly', 'Solicitado','$fechasoli' , NULL, '$miContador', 'subido')";
+>>>>>>> codaym
 /*$sql= "INSERT INTO `tblhistovaca` (`HisCodigo`, `HisTipoAu`, `HisFechaInicio`, `HisFechaRegreso`, `HisFechaSolicitud`, `HisEstado`, `HisForUsuCed`, `HisDiasSolici`, `HisDocumen`) VALUES (NULL, '$TipoAusencia', '$fechaparti', '$fechasoli', '$finaly', 'Solicitado', NULL, '$miContador', 'subido')"; */
     
 $resultados=$conexion->query($sql);
@@ -143,7 +154,11 @@ echo " Dias que hay entre fechas PERO sin fines de semana  ". $miContador;
 
 
 
+<<<<<<< HEAD
 ?>
 
 </body>
 </html>
+=======
+?>
+>>>>>>> codaym

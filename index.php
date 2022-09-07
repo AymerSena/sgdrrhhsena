@@ -23,9 +23,12 @@ if (isset($_POST["iniciarSesion"])) {
                         case 3:
                             header("Location: menuEmpleado.php");
                             break;
+<<<<<<< HEAD
                         case 4:
                             header("Location: menuRRHH.php");
                             break;
+=======
+>>>>>>> codaym
     
                         default:
                             echo "No perfil";

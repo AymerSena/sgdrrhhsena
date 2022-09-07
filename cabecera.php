@@ -128,12 +128,17 @@ include("constaVari.php");
                         case 3;
                             echo "<h1>Colaborador</h1>";
                             break;
+<<<<<<< HEAD
 
                         case 4;
                             echo "<h1>Recursos Humanos</h1>";
                             break;
                         default:
                             echo "Algo paso, por favor contacte al administrador del sistema error en codigo"; 
+=======
+                        default:
+                            echo "Algo paso, porfavor contacte al administrador del sistema error en codigo"; 
+>>>>>>> codaym
                             break;
                     }
                     ?>

@@ -32,7 +32,11 @@ include("sesionAdmin.php");
                     <a href=""><img class="logo" src="https://1.bp.blogspot.com/-yxwhRnbY8mQ/YT5yLdXGtOI/AAAAAAAAAGY/2MsyxUcL5uAVrLU0RpV2-lZvznBtNf4CgCNcBGAsYHQ/s320/IconoCrudDataSen.png"></a>
                 </li>
                 <li>
+<<<<<<< HEAD
                     <a href="MenuAdministradorVaca.php"><img class="logo" src="https://1.bp.blogspot.com/-CVbG8VMJUGg/YT5yP3LJHnI/AAAAAAAAAG8/oSqBcKNbMWcH6gM4eXFSKPc2TC3Mm0rJgCNcBGAsYHQ/s320/IconoSolicitarYConsuVa.png"></a>
+=======
+                    <a href="NegociacionPeriodos.php"><img class="logo" src="https://1.bp.blogspot.com/-CVbG8VMJUGg/YT5yP3LJHnI/AAAAAAAAAG8/oSqBcKNbMWcH6gM4eXFSKPc2TC3Mm0rJgCNcBGAsYHQ/s320/IconoSolicitarYConsuVa.png"></a>
+>>>>>>> codaym
                 </li>
                 <li>
                     <a href="datosBasicos.php"><img class="logo" src="https://1.bp.blogspot.com/-a5TanyEIRgk/YT5yHI4qFcI/AAAAAAAAAFs/mCLSeiyQ5RMHRy8tevTtSORRIaODcvaFQCNcBGAsYHQ/s320/IconoActualiData.png"></a>
