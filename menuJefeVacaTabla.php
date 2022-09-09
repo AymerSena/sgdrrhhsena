@@ -1,10 +1,6 @@
 <?php
-
-$conexion= mysqli_connect("localhost","root","","sgdrrhhbd");
-
-?>
-<?php
 require("sesionJefe.php");
+require("conexionBD.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,9 +34,9 @@ require("sesionJefe.php");
      </tr>
 <?php
 $documento=$_SESSION["idUs"];
-$querySql = "SELECT * FROM tblusuario WHERE UsuCedula=$documento";
+$querySql = "SELECT * FROM tblusuario WHERE UsuCedula='$documento'";
 
-$sql="SELECT * from `tblausencias`  AND AusForUsuCed=$documento";
+$sql="SELECT * from `tblausencias` WHERE AusForUsuCed='$documento'";
 $result=mysqli_query($conexion,$sql);
 
 while ($mostrar=mysqli_fetch_array($result)){ 

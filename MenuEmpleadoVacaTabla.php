@@ -1,11 +1,12 @@
 <?php
 
 $conexion= mysqli_connect("localhost","root","","sgdrrhhbd");
+require("sesionCompartida.php");
+if (isset($_POST["redireccionar"])) {
+    header("Location: MenuEmpleadoVaca.php");
+}
+?>
 
-?>
-<?php
-require("sesionEmpleado.php");
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -59,17 +60,15 @@ while ($mostrar=mysqli_fetch_array($result)){
      </tr>
 
 <?php 
+
  }
 ?> 
 
-
-
-
-
-
  </table>
     
-
+ <form action="" method="post">
+    <button name="redireccionar">Volver al menú</button>
+</form>
 
 
 </body>
