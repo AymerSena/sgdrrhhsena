@@ -1,4 +1,5 @@
 <?php
+require("classphp/criteriosEvaluativos.php");
 require("sesionJefe.php");
 ?>
 
@@ -20,7 +21,7 @@ require("sesionJefe.php");
     <label for="">Criterio evaluativo:</label>
     <input type="text" name="criPre"><br>
     <label for="">Peso o valor del criterio:</label>
-    <input type="number" name="value"><br>x|
+    <input type="number" name="value"><br>
     <button name="campoMas">Agregar pregunta</button> <!-- Para agregar un campo mas -->
     <Button name="terminar">Terminar y guardar</BUtton>   
     <?php
