@@ -129,7 +129,7 @@ include("constaVari.php");
                             echo "<h1>Colaborador</h1>";
                             break;
                         default:
-                            echo "Algo paso, por favor contacte al administrador del sistema error en codigo"; 
+                            echo "Algo paso, porfavor contacte al administrador del sistema error en codigo"; 
                             break;
                     }
                     ?>

@@ -1,5 +1,4 @@
 <?php
-session_start();
 include("sesionCompartida.php");
 require("conexionBD.php");
 $idus = $_SESSION["idUs"];
@@ -14,7 +13,7 @@ foreach ($runQuery as $row ){
     $mail=$row["UsuCorreo"];
     $phone=$row["UsuTelefono"];
     $dataBir=$row["UsuFechaNaci"];
-    $groupSan=$row["UsuTipoSangre"];
+    $groupSan=$row["UsuTIpoSangre"];
    
 }
 
@@ -32,7 +31,7 @@ foreach ($runQuery as $row ){
 
 <body>
 <?php
-session_start();
+
     include("cabecera.php");
 ?>
     <br>
