@@ -5,7 +5,6 @@ require("conexionBD.php");
 $doc=$_SESSION["idUs"];
 $sentSql="SELECT UsuForaArea FROM tblusuario WHERE UsuCedula='$doc'";
 
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
