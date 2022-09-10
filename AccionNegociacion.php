@@ -1,4 +1,5 @@
 <?php
+require("sesionCompartida.php");
     require("conexionBD.php");
 
     $fechaparti=$_POST['date'];
@@ -52,15 +53,17 @@
 
   
 
-
+/*
 
     echo $fechaparti. "<br/>";
     echo $fechasoli. "<br/>";
     echo  "<br/>";
+*/
     $free=CalcuDias($fechaparti,$fechasoli);
+  /*
     echo " Dias que hay entre fechas ". $free[2];
     echo  "<br/>";
-
+*/
     $fecha1 = strtotime($fechaparti); 
     $fecha2 = strtotime($fechasoli); 
     $miContador=-1;
@@ -70,21 +73,23 @@
         $miContador++;
     }
 }
-require("conexionBD.php");
+
 $hoy = new DateTime('now', new DateTimeZone('America/Bogota')); 
 $finaly= $hoy->format('Y-m-d');
 
 
 $vacaciones= CalcuDias($finaly,$contrato);
 
-session_start();
+
 $TipoAusencia= $_SESSION["tip"];
 /*echo   $_SESSION["tip"]  ."<--- Tipo de ausensia " . "  por la variable --> ".$TipoAusencia."<- esta si es si si 100 real no feik"; */
-
-$sql= "INSERT INTO `tblausencias`(`AusForTipAus`, `AusFechaInicio`, `AusFechaRegreso`, `AusFechaSolicitud`, `AusEstado`, `AusFechaInterr`, `AusForUsuCed`, `AusDiasSolici`, `AusDocumen`) VALUES ( '$TipoAusencia', '$fechaparti', '$fechasoli', '$finaly', 'Solicitado','$fechasoli' , NULL, '$miContador', 'subido')";
+$documento=$_SESSION["idUs"];
+    $querySql = "SELECT * FROM tblusuario WHERE UsuCedula=$documento";
+$sql= "INSERT INTO `tblausencias`(`AusForTipAus`, `AusFechaInicio`, `AusFechaRegreso`, `AusFechaSolicitud`, `AusEstado`, `AusFechaInterr`, `AusForUsuCed`, `AusDiasSolici`, `AusDocumen`) VALUES ( '$TipoAusencia', '$fechaparti', '$fechasoli', '$finaly', 'Solicitado','$fechasoli' , $documento, '$miContador', 'subido')";
 /*$sql= "INSERT INTO `tblhistovaca` (`HisCodigo`, `HisTipoAu`, `HisFechaInicio`, `HisFechaRegreso`, `HisFechaSolicitud`, `HisEstado`, `HisForUsuCed`, `HisDiasSolici`, `HisDocumen`) VALUES (NULL, '$TipoAusencia', '$fechaparti', '$fechasoli', '$finaly', 'Solicitado', NULL, '$miContador', 'subido')"; */
     
 $resultados=$conexion->query($sql);
+/*
 echo  "<br/>";
 echo " Dias que hay entre fechas PERO sin fines de semana  ". $miContador;
     echo  "<br/>";
@@ -123,6 +128,9 @@ echo " Dias que hay entre fechas PERO sin fines de semana  ". $miContador;
 
     }
 
-
-
+*/
+header("Location: MenuEmpleadoVacaTabla.php");
 ?>
+
+</body>
+</html>

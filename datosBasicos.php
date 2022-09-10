@@ -31,7 +31,6 @@ foreach ($runQuery as $row ){
 
 <body>
 <?php
-
     include("cabecera.php");
 ?>
     <br>

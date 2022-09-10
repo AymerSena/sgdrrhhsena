@@ -29,7 +29,7 @@ require("sesionEmpleado.php");
                     <a href=""><img class="logo" src="https://1.bp.blogspot.com/-pWbP6N_2-F0/YT5yIQZXEtI/AAAAAAAAAGA/n0-4cvp7gFYTvNkgiiwsFx1FQM-5hRWZACNcBGAsYHQ/s320/IconoCarDesArch.png"></a>
                 </li>
                 <li>
-                    <a href="SolicitudEmpleado.php"><img class="logo" src="https://1.bp.blogspot.com/-CVbG8VMJUGg/YT5yP3LJHnI/AAAAAAAAAG8/oSqBcKNbMWcH6gM4eXFSKPc2TC3Mm0rJgCNcBGAsYHQ/s320/IconoSolicitarYConsuVa.png"></a>
+                    <a href="MenuEmpleadoVaca.php"><img class="logo" src="https://1.bp.blogspot.com/-CVbG8VMJUGg/YT5yP3LJHnI/AAAAAAAAAG8/oSqBcKNbMWcH6gM4eXFSKPc2TC3Mm0rJgCNcBGAsYHQ/s320/IconoSolicitarYConsuVa.png"></a>
                 </li>
                 <li>
                     <a href="moduloEvalucion.html"><img class="logo" src="https://1.bp.blogspot.com/-DFzD5Wp_k1I/YT5yJ1ibjFI/AAAAAAAAAGM/J3uFXohr1YY49BYHDVROIISKXNJ3XvDGACNcBGAsYHQ/s320/IconoCrearEvaP.png"></a>

@@ -23,6 +23,9 @@ if (isset($_POST["iniciarSesion"])) {
                         case 3:
                             header("Location: menuEmpleado.php");
                             break;
+                        case 4:
+                            header("Location: menuRRHH.php");
+                            break;
     
                         default:
                             echo "No perfil";
