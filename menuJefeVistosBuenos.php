@@ -91,6 +91,7 @@ while ($mostrar=mysqli_fetch_array($result)){
  }
 ?> 
  </table>
+ <button><a href="menuJefe.php">Menú principal</a></button>
 <?php
 
     include("pie.php");

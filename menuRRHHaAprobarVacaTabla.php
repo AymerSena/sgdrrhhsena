@@ -27,7 +27,12 @@ if (isset($_POST["runEstado"])) {
     $estado=$_POST["estadoNew"];
     $senteciaSQL="UPDATE tblausencias SET AusEstado='$estado' WHERE AusCodigo=$valor;";
     $runComandSQL= $conexion->query($senteciaSQL);
-   // header("Location: TablaDeVacaciones.php");//
+   ?>
+   <script>
+    alert("Fue cambiado exitosamente el registro");
+    window.location.href="menuRRHHaAprobarVaca.php";
+   </script>
+   <?php
 }
 
 ?>
@@ -39,7 +44,7 @@ if (isset($_POST["runEstado"])) {
         <option value="Denegado">Denegado</option>
     </select>
     <button name="runEstado">Aceptar</button>
-    <button name="cacelar">Cancelar</button>
+    <button name="cacelar"><a href="menuRRHHaAprobarVaca.php">Cancelar</a></button>
 </form>
 
 <?php
