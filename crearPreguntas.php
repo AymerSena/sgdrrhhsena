@@ -1,7 +1,7 @@
 <?php
 require("classphp/criteriosEvaluativos.php");
 require("sesionJefe.php");
-require("classphp/criteriosEvaluativos.php");
+
 if (isset($_POST["terminar"])){
     header('location: gestionEvaluaciones.php');
 }

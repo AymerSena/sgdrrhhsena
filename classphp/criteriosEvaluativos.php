@@ -28,7 +28,12 @@ class criteriosEvaluativos{
         require("./conexionBD.php");
         $sentSQL="UPDATE tblpreguntaseva SET CriPregunta = '$n', CriValorPreg = '$v' WHERE CriCodigo = '$a'";
         $runSent= $conexion -> query($sentSQL);
-
+    }
+    public function contarNoPre($evaluacion){
+        require("./conexionBD.php");
+        $senteSQL="SELECT COUNT(*) FROM tblpreguntaseva WHERE CriForeEvaluacion='$evaluacion'";
+        $runRest=$conexion->query($senteSQL);
+        return $runRest;
     }
 }
 ?>
