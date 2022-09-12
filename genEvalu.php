@@ -45,7 +45,7 @@ $dataPreg=$classCrite->consultarAreaEva($evalId);
     </form>
     <?php
     if (isset($_POST["generar"])) {
-$codigoHisRes = $classHisRes->insertHistRest($fechaAct,$idFuncionario);
+$codigoHisRes = $classHisRes->insertHistRest($fechaAct,$idFuncionario,$evalId);
 $resCodiAsoc = $codigoHisRes->fetch_array();
 $cantCriterios= $classCrite->contarNoPre($evalId);
 $noPreg=$cantCriterios->fetch_array();
@@ -60,7 +60,12 @@ $noPreg=$cantCriterios->fetch_array();
             $sentSQL = "INSERT INTO tblresultadoeva(ResRespuesta,ResNota,ResForPregun,ResForEvrHis) VALUES('$arreglo','$val','$arreglo3[$key]','$resCodiAsoc[0]')";
             $run = $classHisRes->insertRespues($sentSQL);
     }
-        header("Location: evaluarEmp.php");
+        ?>
+        <script>
+            alert("Se agrego los registros");
+            window.location.href="evaluarEmp.php";
+        </script>
+        <?php
     }
     ?>
 </div>
