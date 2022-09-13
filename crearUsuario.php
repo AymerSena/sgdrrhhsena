@@ -9,6 +9,8 @@ require("sesionAdmin.php");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/plantillaConten.css">
+    <link rel="stylesheet" href="CSS/css2/formularios.css">
+    <link rel="stylesheet" href="CSS/css2/botones.css">
     <title>Plantilla para proyecto unix</title>
 </head>
 

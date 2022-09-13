@@ -1,0 +1,13 @@
+
+input{
+    border: blue solid 2px;
+}
+select{
+    border: blue solid 2px;
+}
+option{
+    font-weight: bold;
+}
+label{
+    font-weight: 550;
+}
