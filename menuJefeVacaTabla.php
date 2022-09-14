@@ -40,10 +40,14 @@ $sql="SELECT * from `tblausencias` WHERE AusForUsuCed='$documento'";
 $result=mysqli_query($conexion,$sql);
 
 while ($mostrar=mysqli_fetch_array($result)){ 
+    $idause=$mostrar["AusForTipAus"];
+    $nombrSQL="SELECT TipTipo FROM tbltiposausen WHERE TipID='$idause'";
+    $run=$conexion->query($nombrSQL);
+    $recorrer=$run->fetch_array();
 ?>
      <tr>
          <td> <?php  echo $mostrar["AusCodigo"]?></td>
-         <td> <?php  echo $mostrar["AusForTipAus"]?></td>
+         <td> <?php  echo $recorrer[0];?></td>
          <td> <?php  echo $mostrar["AusFechaInicio"]?></td>
          <td> <?php  echo $mostrar["AusFechaRegreso"]?></td>
          <td> <?php  echo $mostrar["AusFechaSolicitud"]?></td>

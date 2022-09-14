@@ -1,10 +1,11 @@
 <?php
-include("sesionCompartida.php");
-require("conexionBD.php");
+require("sesionCompartida.php");
+require("classphp/usuarios.php");
 $idus = $_SESSION["idUs"];
-$senQueryData="SELECT * FROM tblusuario WHERE UsuCedula=$idus";
-$runQuery=$conexion->query($senQueryData);
-foreach ($runQuery as $row ){
+$classusuario= new usuario();
+$dataFunci=$classusuario->consultOneUsuario($idus);
+
+foreach ($dataFunci as $row ){
     $name=$row["UsuNombre"];
     $lastname=$row["UsuApellido"];
     $gen=$row["UsuGenero"];
@@ -13,8 +14,49 @@ foreach ($runQuery as $row ){
     $mail=$row["UsuCorreo"];
     $phone=$row["UsuTelefono"];
     $dataBir=$row["UsuFechaNaci"];
-    $groupSan=$row["UsuTIpoSangre"];
+    $groupSan=$row["UsuTIpoSangre"];  
+}
+
+if(isset($_POST["buttonEnviar"])){
+    //datos recolectados del formulario
+$upNombre=$_POST["nombre"];
+$upApellido=$_POST["Apellido"];
+$upGenero=$_POST["Genero"];
+$upDireccion=$_POST["Direccion"];
+$upBarrio=$_POST["Barrio"];
+$upCorreo=$_POST["Correo"];
+$upTelefono=$_POST["Telefono"];
+$upFechaNac=$_POST["Fecha_naci"];
+   $runUpdate=$classusuario->actualizarDataBasica($upNombre,$upApellido,$upGenero,$upDireccion,$upBarrio,$upCorreo,$upTelefono,$upFechaNac,$idus);
    
+   ?>
+   
+   <script>
+    alert("Actualiación exitosa");
+   </script>
+   <?php
+   header("Refresh:0");
+}
+
+if (isset($_POST["volver"])) {
+    switch ($_SESSION["rol"]) {
+        case 1:
+            header("Location: menuAdministrador.php");
+            break;
+        case 2:
+            header("Location: menuJefe.php");
+            break;
+        case 3:
+            header("Location: menuEmpleado.php");
+            break;
+        case 4:
+            header("Location: menuRRHH.php");
+            break;
+
+        default:
+            echo "No perfil";
+            break;
+    }
 }
 
 ?>
@@ -76,16 +118,14 @@ foreach ($runQuery as $row ){
                     Fecha Nacimiento
                     <input type="Date" size="1" name="Fecha_naci" id="Fecha_naci" value="<?php echo $dataBir; ?>">
                 </div>
-                    Grup sanguineo
-                    <input type="Grupo_sanguinio" size="3" name="Grupo_sanguinio" id="Grupo_sanguinio" value="<?php echo $groupSan; ?>">
                 </div>
                 
                 <br>
 
                 <div class="columna3">
                     <input type="submit" value="ENVIAR" name="buttonEnviar">
-                    <button>LIMPIAR</button>
-                    <input type="reset" value="LIMPIAR"></p>
+                    <button name="volver">Volver al menú</button>
+                    
                 </div>
     </div>
 
@@ -93,33 +133,6 @@ foreach ($runQuery as $row ){
     </blockquote>
     </div>
     <?php
-    
-    if(isset($_POST["buttonEnviar"])){
-        //datos recolectados del formulario
-    $upNombre=$_POST["nombre"];
-    $upApellido=$_POST["Apellido"];
-    $upGenero=$_POST["Genero"];
-    $upDireccion=$_POST["Direccion"];
-    $upBarrio=$_POST["Barrio"];
-    $upCorreo=$_POST["Correo"];
-    $upTelefono=$_POST["Telefono"];
-    $upFechaNac=$_POST["Fecha_naci"];
-    $upGsanquineo=$_POST["Grupo_sanguinio"];
-    
-        /*$senUpdaData="UPDATE tblusuario SET UsuNombre = $upNombre,
-        UsuApellido=$upApellido,
-        UsuGenero=$upGenero,
-        UsuDireccion=$upDireccion,
-        UsuBarrio=$upBarrio,
-        UsuCorreo=$upCorreo,
-        UsuTelefono=$upTelefono,
-        UsuFechaNaci=$upFechaNac,
-        UsuTipoSangre=$upGsanquineo WHERE UsuCedula=$idus";
-        */
-        $senUpdaData="UPDATE tblusuario SET UsuNombre = $upNombre WHERE UsuCedula=$idus";
-        $runUpdateData=$conexion->query($senUpdaData);
-    }
-    
     include("pie.php");
     ?>
 </body>

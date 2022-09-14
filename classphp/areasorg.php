@@ -14,6 +14,12 @@ class areasorg{
         $recuperarValor=$conexion->query($senteciaSQL);
         return $recuperarValor;
     }
+    public function consultarAreas(){
+        require("./conexionBD.php");
+        $senteSQL="SELECT * FROM tblarea ";
+        $run=$conexion->query($senteSQL);
+        return $run;
+    }
     
 }
 
