@@ -1,22 +1,4 @@
-<?php
-include("sesionJefe.php");
-?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/plantillaConten.css">
-    <title>Evaluar empleado</title>
-</head>
-
-<body>
-<?php
-    include("cabecera.php");
-?>
-    <br>
+<?php include('Template/cabecera.php');?>
     <div id="presentacion">
         <form action="evaluar_empleado.php" method="POST">
             <h3><label>Ingrese el documento del empleado a evaluar.:</label></h3>
@@ -52,9 +34,4 @@ include("sesionJefe.php");
             </blockquote>
         </form>
     </div>
-    <?php
-    include("pie.php");
-    ?>
-</body>
-
-</html>
+<?php include('Template/pie.php'); ?>

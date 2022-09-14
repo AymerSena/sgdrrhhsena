@@ -57,7 +57,7 @@ body {
   pointer-events: none;
   border-bottom: #fff solid 1px;
 }
-.photousu {
+.photousu  {
   position: relative;
   width: 57px;
   height: 57px;
@@ -65,7 +65,7 @@ body {
   overflow: hidden;
   cursor: pointer;
 }
-.photousu img {
+.photousu  img {
   position: absolute;
   top: 0;
   left: 0;

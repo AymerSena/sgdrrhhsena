@@ -1,5 +1,2 @@
 <?php
-
-$conexion = mysqli_connect("localhost","root","","sgdrrhhbd");
-
-?>
+$conexion = mysqli_connect("localhost", "root", "", "sgdrrhhbd");

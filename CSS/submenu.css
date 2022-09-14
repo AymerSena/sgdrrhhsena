@@ -1,0 +1,17 @@
+.sub {
+  position: relative;
+  margin: auto;
+  border: solid;
+}
+
+.menus {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.subicon {
+  color: black;
+  font-size: 100px;
+  padding: 20px 10px;
+}
