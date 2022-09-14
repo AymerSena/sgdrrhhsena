@@ -6,14 +6,21 @@
     let toggle = document.querySelector('.toggle');
     let navigation = document.querySelector('.navigation');
     let main = document.querySelector('.main');
+<<<<<<< HEAD
 
+=======
+>>>>>>> codaym
     toggle.onclick = function() {
         navigation.classList.toggle('active');
         main.classList.toggle('active');
     }
+<<<<<<< HEAD
 
     let list = document.querySelectorAll('.navigation li');
 
+=======
+    let list = document.querySelectorAll('.navigation li');
+>>>>>>> codaym
     function activeLink() {
         list.forEach((item) =>
             item.classList.remove('hovered'));

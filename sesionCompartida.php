@@ -3,7 +3,7 @@ session_start();
 if(!isset($_SESSION['rol'])){
     header('location: index.php');
 }else{
-    if($_SESSION['rol'] > 3 ){
+    if($_SESSION['rol'] > 4 ){
         session_unset(); 
         session_destroy(); 
         header('location: Index.php');

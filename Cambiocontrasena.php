@@ -1,3 +1,9 @@
+<?php
+require("sesionCompartida.php");
+require("classphp/contrasena.php");
+$documenFuncio=$_SESSION["idUs"];
+$classContra = new contrasena;
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,16 +17,15 @@
 
 <body>
 <?php
-    session_start();
     include("cabecera.php");
 ?>
     <section id="cambiocontraseña">
         <h1>Cambio de contraseña</h1>
         <form method="POST">
-            <input type="text" placeholder="Contraseña Actual" name="Contra"><br><br>
-            <input type="text" placeholder="Nueva Contraseña" name="NuevaContrasena"><br><br>
-            <input type="text" placeholder="Repetir nueva contraseña" name="RepetirNuevaContrasena"><br><br>
-            <button id=boton type="submit" name="CambiarContrasena">Cambiar contraseña</button><br>
+            <input type="password" placeholder="Contraseña Actual" name="Contra"><br><br>
+            <input type="password" placeholder="Nueva Contraseña" name="nuevaContrasena"><br><br>
+            <input type="password" placeholder="Repetir nueva contraseña" name="repetirNuevaContrasena"><br><br>
+            <button id=boton type="submit" name="cambiarContrasena">Cambiar contraseña</button><br>
         </form>
     </section>
     <?php
@@ -29,29 +34,34 @@
 </body>
 <?php
 require("conexionBD.php");
-if (isset($_POST['CambiarContrasena'])) {
-
-    require("Index.php");
-    echo $docu;
-
-    $contra = $_POST['Contra'];
-    $npassword = $_POST['NuevaContrasena'];
-    $rnpassword = $_POST['RepetirNuevaContrasena'];
-    if (isset($_POST["ContraseñaActual"])) {
-        if (isset($_POST["NuevaContraseña"])) {
-            if (isset($_POST["RepetirNuevaContraseña"])) {
-                $sql = "SELECT * FROM tblusuario WHERE UsuCedula='$docu'";
-                $resulpassword = $conexion->query($sql);
-                foreach ($resulpassword as $rows) {
-                    if ($rows['UsuContrasenaSis'] == $contra) {
-                        if ($npassword == $rnpassword) {
-                            $updatepass = $conexion->query("UPDATE tblusuario SET UsuContrasenaSis=$npassword");
-                            echo "Cambios realizados con exito";
-                        }
-                    }
-                }
-            }
+if (isset($_POST['cambiarContrasena'])) {
+    $bpswActual=$classContra->consulPasword($documenFuncio);
+    $pswActual=$bpswActual->fetch_array();
+    $formpswActual=$_POST["Contra"];
+    $formpswNew=$_POST["nuevaContrasena"];
+    $formpswRNew=$_POST["repetirNuevaContrasena"];
+    if ($pswActual[0]=$formpswActual) {
+        if ($formpswNew=$formpswRNew) {
+            $runActualizar=$classContra->actualizarPasword($formpswNew,$documenFuncio);
+            ?>
+            <script>
+                alert("Se cambio la contraseña de manera correcta");
+                window.location.href="auxCierrLogin.php";
+            </script>
+            <?php
+        }else {
+            ?>
+            <script>
+                alert("No coinciden las contraseñas ingresadas");
+            </script>
+            <?php
         }
+    }else {
+        ?>
+            <script>
+                alert("La contraseña actual ingresada no es correcta");
+            </script>
+            <?php
     }
 }
 

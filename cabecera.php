@@ -10,10 +10,10 @@ include("constaVari.php");
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="template.css">
-    <link rel="stylesheet" href="template.css">
-    <link rel="stylesheet" href="../CSS/changepassw.css">
-    <link rel="stylesheet" href="../CSS/submenu.css">
+    <link rel="stylesheet" href="CSS/template.css">
+    <link rel="stylesheet" href="CSS/changepassw.css">
+    <link rel="stylesheet" href="CSS/submenu.css">
+    <link rel="stylesheet" href="CSS/menus.css">
 </head>
 <body>
 <?php
@@ -127,6 +127,10 @@ include("constaVari.php");
                             break;
                         case 3;
                             echo "<h1>Colaborador</h1>";
+                            break;
+
+                        case 4;
+                            echo "<h1>Recursos Humanos</h1>";
                             break;
                         default:
                             echo "Algo paso, por favor contacte al administrador del sistema error en codigo"; 

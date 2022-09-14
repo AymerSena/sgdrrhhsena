@@ -8,6 +8,19 @@ class areasorg{
         $runQuery=$conexion->query($sql);
 
     }
+    public function consultarAreaPoridFun($docuFuncionario){
+        require("./conexionBD.php");
+        $senteciaSQL="SELECT UsuForaArea FROM tblusuario WHERE UsuCedula='$docuFuncionario'";
+        $recuperarValor=$conexion->query($senteciaSQL);
+        return $recuperarValor;
+    }
+    public function consultarAreas(){
+        require("./conexionBD.php");
+        $senteSQL="SELECT * FROM tblarea ";
+        $run=$conexion->query($senteSQL);
+        return $run;
+    }
+    
 }
 
 ?>

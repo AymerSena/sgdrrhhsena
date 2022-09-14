@@ -3,7 +3,7 @@ require("sesionAdmin.php");
 require("classphp/areasorg.php");
 if (isset($_POST["save"])) {
     $instanciar = new areasorg();
-    $creaObej = $instanciar->crear($_POST["nameAre"], $_POST["docResp"], $_POST["descAre"],); 
+    $creaObej = $instanciar->crear($_POST["nameAre"], $_POST["docResp"], $_POST["descAre"]); 
 }
 if (isset($_POST["volver"])) {
     header("Location: areasOrga.php");
