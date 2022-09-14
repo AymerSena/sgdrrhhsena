@@ -23,12 +23,28 @@ session_start();
     <select name="filterPeople" id="">
         <option value="all">Seleccionar todo</option>
         <?php
-        require("conexionBD.php");
-        $queryBdJub="SELECT UsuCedula, UsuNombre, UsuApellido FROM tblusuario;";
-        $answerQueSql=$conexion->query($queryBdJub);
-        foreach($answerQueSql as $rowsCol){
+        if (isset($_POST['boton'])) {
+            echo $_POST['filterPeople'] . ' Se cumple la condición del boton';
+            if ($_POST['filterPeople'] == "all") {
+                $whereSql = "";
+            } else {
+                $document = $_POST['filterPeople'];
+                $whereSql = "WHERE usu.UsuCedula=$document";
+            }
+        } else {
+            $whereSql = "";
+        }
+        $sql = "SELECT his.HisFechaSolicitud, his.HisFechaInicio, his.HisFechaRegreso, his.HisEstado, usu.UsuNombre, usu.UsuApellido FROM tblhistovaca his INNER JOIN tblusuario usu ON his.HisForUsuCed=usu.UsuCedula $whereSql";
+        $answTableSql = $conexion->query($sql);
+        foreach ($answTableSql as $rowsTable) {
         ?>
-        <option value="<?php echo $rowsCol['UsuCedula']; ?>"><?php echo $rowsCol['UsuNombre'].' '.$rowsCol['UsuApellido']?></option>
+            <tr>
+                <td><?php echo $rowsTable['UsuNombre'] . ' ' . $rowsTable['UsuApellido']; ?></td>
+                <td><?php echo $rowsTable['HisFechaSolicitud']; ?></td>
+                <td><?php echo $rowsTable['HisFechaInicio']; ?></td>
+                <td><?php echo $rowsTable['HisFechaRegreso']; ?></td>
+                <td><?php echo $rowsTable['HisEstado']; ?></td>
+            </tr>
         <?php
         }
         ?>

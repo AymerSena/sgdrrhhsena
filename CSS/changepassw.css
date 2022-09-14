@@ -1,0 +1,29 @@
+.cambiocontraseña {
+  margin: auto;
+  margin-top: 80px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  line-height: 1;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  max-width: 70%;
+  max-height: 50%;
+  padding: 20px 40px;
+  width: 250px;
+  justify-content: center;
+}
+.tittlechangepassw {
+  margin: 20px 0;
+}
+.box {
+  border: solid 1px blue;
+}
+
+#boton {
+  border: solid 1px blue;
+  padding: 10px 20px;
+  margin: 10px auto;
+  border-radius: 40px;
+  font-size: 16px;
+}

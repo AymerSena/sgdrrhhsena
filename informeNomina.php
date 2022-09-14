@@ -1,4 +1,4 @@
-<?php
+w<?php
 require("sesionJefe.php");
 ?>
 <!DOCTYPE html>
@@ -77,9 +77,13 @@ require("sesionJefe.php");
             <img src="https://1.bp.blogspot.com/-CRGFBvE8s8k/YT5yRhIEj8I/AAAAAAAAAHM/dplt4qgxJmcjfSP213rWRyF0EoW_BQlSACNcBGAsYHQ/s332/logoPag.png" id="logoUnix">
         </div>
     </div>
+<<<<<<< HEAD
+    <?php include('Template/pie.php'); ?>
+=======
     <?php
     include("pie.php");
     ?>
 </body>
 
 </html>
+>>>>>>> codaym

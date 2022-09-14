@@ -4,9 +4,13 @@
 --
 -- Servidor: 127.0.0.1
 <<<<<<< HEAD
+-- Tiempo de generación: 07-10-2021 a las 01:53:56
+=======
+<<<<<<< HEAD
 -- Tiempo de generación: 26-03-2022 a las 15:51:36
 =======
 -- Tiempo de generación: 07-10-2021 a las 01:53:56
+>>>>>>> codaym
 >>>>>>> codaym
 -- Versión del servidor: 10.4.20-MariaDB
 -- Versión de PHP: 7.3.29
@@ -28,6 +32,8 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 -- Estructura Stand-in para la vista `areasdefuncionarios`
 -- (Véase abajo para la vista actual)
@@ -55,6 +61,7 @@ CREATE TABLE `areasysusevaluaciones` (
 --
 =======
 >>>>>>> codaym
+>>>>>>> codaym
 -- Estructura de tabla para la tabla `tblarea`
 --
 
@@ -64,6 +71,8 @@ CREATE TABLE `tblarea` (
   `AreDescripcion` varchar(30) NOT NULL DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 --
 -- Volcado de datos para la tabla `tblarea`
@@ -76,6 +85,7 @@ INSERT INTO `tblarea` (`AreCodigo`, `AreNombre`, `AreDescripcion`) VALUES
 
 =======
 >>>>>>> codaym
+>>>>>>> codaym
 -- --------------------------------------------------------
 
 --
@@ -84,6 +94,11 @@ INSERT INTO `tblarea` (`AreCodigo`, `AreNombre`, `AreDescripcion`) VALUES
 
 CREATE TABLE `tblausencias` (
   `AusCodigo` int(12) NOT NULL,
+<<<<<<< HEAD
+  `AusTipo` varchar(20) NOT NULL DEFAULT '',
+  `AusDescripcion` varchar(20) NOT NULL DEFAULT '',
+  `AusForUsuar` int(12) DEFAULT NULL
+=======
 <<<<<<< HEAD
   `AusFechaInicio` date DEFAULT NULL,
   `AusFechaRegreso` date DEFAULT NULL,
@@ -99,11 +114,14 @@ CREATE TABLE `tblausencias` (
   `AusDescripcion` varchar(20) NOT NULL DEFAULT '',
   `AusForUsuar` int(12) DEFAULT NULL
 >>>>>>> codaym
+>>>>>>> codaym
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 -- Estructura de tabla para la tabla `tblcontratos`
 --
@@ -126,6 +144,7 @@ INSERT INTO `tblcontratos` (`ContId`, `ContTipo`, `ContDescripcion`) VALUES
 
 --
 =======
+>>>>>>> codaym
 >>>>>>> codaym
 -- Estructura de tabla para la tabla `tbldocumento`
 --
@@ -166,6 +185,8 @@ CREATE TABLE `tblevaluaciones` (
 
 INSERT INTO `tblevaluaciones` (`EvaCodigo`, `EvaNombre`, `EvaDescripcion`, `EvaForArea`) VALUES
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 (1, 'PrimeraEvaluacion', 'Hola', 1),
 (2, 'Segunda Evaluacion', 'Prueba con la segunda evaluación', 0),
 (3, 'Tercera Evaluacion', 'Esta debe ser la tercera evaluacion crea', 2),
@@ -173,17 +194,23 @@ INSERT INTO `tblevaluaciones` (`EvaCodigo`, `EvaNombre`, `EvaDescripcion`, `EvaF
 (5, 'Quinta eVA', 'Descripcion ', 0),
 (6, '6 evaluacion', 'Descrip 6', 0);
 =======
+>>>>>>> codaym
 (1, 'PrimeraEvaluacion', 'Hola', NULL),
 (2, 'Segunda Evaluacion', 'Prueba con la segunda evaluación', NULL),
 (3, 'Tercera Evaluacion', 'Esta debe ser la tercera evaluacion crea', NULL),
 (4, 'Cuarta Pregunta ', 'Cuarta demostración', NULL),
 (5, 'Quinta eVA', 'Descripcion ', NULL),
 (6, '6 evaluacion', 'Descrip 6', NULL);
+<<<<<<< HEAD
+=======
+>>>>>>> codaym
 >>>>>>> codaym
 
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 -- Estructura de tabla para la tabla `tblexperiencia`
 --
@@ -271,6 +298,7 @@ INSERT INTO `tblhorarios` (`horarIdPK`, `horarios`, `horariDescripcion`) VALUES
 (2, 'NOCTURNO', 'Jornada nocturna ');
 
 =======
+>>>>>>> codaym
 -- Estructura de tabla para la tabla `tblhistovaca`
 --
 
@@ -284,6 +312,9 @@ CREATE TABLE `tblhistovaca` (
   `HisDiasSolici` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+<<<<<<< HEAD
+=======
+>>>>>>> codaym
 >>>>>>> codaym
 -- --------------------------------------------------------
 
@@ -325,17 +356,23 @@ CREATE TABLE `tblpreguntaseva` (
 
 INSERT INTO `tblpreguntaseva` (`CriCodigo`, `CriPregunta`, `CriValorPreg`, `CriForeEvaluacion`) VALUES
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 (1, 'Pregunta', 20, 1),
 (2, 'Pregunta1', 32, 1),
 (3, 'Pregunta 3', 45, 1),
 (4, 'Pregunta 4', 20, 2),
 (5, 'Pregunta?', 50, 2);
 =======
+>>>>>>> codaym
 (1, 'Pregunta', 20, NULL),
 (2, 'Pregunta1', 32, NULL),
 (3, 'Pregunta 3', 45, NULL),
 (4, 'Pregunta 4', 20, NULL),
 (5, 'Pregunta?', 50, NULL);
+<<<<<<< HEAD
+=======
+>>>>>>> codaym
 >>>>>>> codaym
 
 -- --------------------------------------------------------
@@ -346,6 +383,11 @@ INSERT INTO `tblpreguntaseva` (`CriCodigo`, `CriPregunta`, `CriValorPreg`, `CriF
 
 CREATE TABLE `tblresultadoeva` (
   `ResCodigo` int(12) NOT NULL,
+<<<<<<< HEAD
+  `ResNota` int(3) NOT NULL,
+  `ResForUsuario` int(12) DEFAULT NULL,
+  `ResForPregun` int(12) DEFAULT NULL
+=======
 <<<<<<< HEAD
   `ResRespuesta` varchar(4) NOT NULL,
   `ResNota` int(3) NOT NULL,
@@ -368,6 +410,7 @@ CREATE TABLE `tbltiposausen` (
   `ResNota` int(3) NOT NULL,
   `ResForUsuario` int(12) DEFAULT NULL,
   `ResForPregun` int(12) DEFAULT NULL
+>>>>>>> codaym
 >>>>>>> codaym
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -394,6 +437,11 @@ CREATE TABLE `tblusuario` (
   `UsuContrasenaSis` varchar(25) DEFAULT NULL,
   `UsuFechaContrato` date DEFAULT NULL,
 <<<<<<< HEAD
+  `UsuForaPerfil` int(12) DEFAULT NULL,
+  `UsuForaArea` int(12) DEFAULT NULL,
+  `UsuDiasAcuVacaci` int(3) NOT NULL
+=======
+<<<<<<< HEAD
   `UsuNoHijos` int(3) NOT NULL,
   `UsuForaPerfil` int(12) DEFAULT NULL,
   `UsuForaArea` int(12) DEFAULT NULL,
@@ -407,12 +455,15 @@ CREATE TABLE `tblusuario` (
   `UsuForaArea` int(12) DEFAULT NULL,
   `UsuDiasAcuVacaci` int(3) NOT NULL
 >>>>>>> codaym
+>>>>>>> codaym
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `tblusuario`
 --
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 INSERT INTO `tblusuario` (`UsuCedula`, `UsuNombre`, `UsuApellido`, `UsuCargo`, `UsuGenero`, `UsuEps`, `UsuTelefono`, `UsuBarrio`, `UsuDireccion`, `UsuFechaNaci`, `UsuFechaExpCc`, `UsuCorreo`, `UsuTIpoSangre`, `UsuContrasenaSis`, `UsuFechaContrato`, `UsuNoHijos`, `UsuForaPerfil`, `UsuForaArea`, `UsuDiasAcuVacaci`, `UsuFotoPerfil`, `UsuSalario`, `UsuHorario`, `UsuTipoContra`) VALUES
 (0, '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, 0, '', 0, NULL, NULL),
@@ -440,12 +491,16 @@ DROP TABLE IF EXISTS `areasysusevaluaciones`;
 
 CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `areasysusevaluaciones`  AS SELECT `ar`.`AreNombre` AS `AreNombre`, `eva`.`EvaNombre` AS `EvaNombre`, `eva`.`EvaDescripcion` AS `EvaDescripcion` FROM (`tblevaluaciones` `eva` join `tblarea` `ar` on(`ar`.`AreCodigo` = `eva`.`EvaForArea`)) ;
 =======
+>>>>>>> codaym
 INSERT INTO `tblusuario` (`UsuCedula`, `UsuNombre`, `UsuApellido`, `UsuCargo`, `UsuGenero`, `UsuEps`, `UsuTelefono`, `UsuBarrio`, `UsuDireccion`, `UsuFechaNaci`, `UsuFechaExpCc`, `UsuCorreo`, `UsuTIpoSangre`, `UsuContrasenaSis`, `UsuFechaContrato`, `UsuForaPerfil`, `UsuForaArea`, `UsuDiasAcuVacaci`) VALUES
 (111, 'Prueba', 'NMa', '', '', '0', '0', '0', '0', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0),
 (1001, 'Johhan', 'asdfasdfasdfasd', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Empleado01', NULL, 3, NULL, 0),
 (1002, 'Miguel', 'Copete', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Jefe01', NULL, 2, NULL, 0),
 (111111111, 'Pepito', 'Perez', 'Analista Sistemas', 'M', 'Eps Salud OCU', '123123|123', 'EL BCKS', 'En calle 21 avinida ', '2012-09-07', '2016-09-08', 'pepito@pepito.com.co', 'AB+', 'Pepito01', '2019-09-01', 3, NULL, 0),
 (1110000001, 'El Admin Aymer', 'Suescun Ruiz', 'Analista Sistemas', 'M', 'SALUD PRO', '3177777777', 'BONITO', 'CALLE 32 DEL PALA # ', '1998-09-25', '2012-09-11', 'aycruz04@misena.edu.', 'C+', 'NoMeLaSe01', '2021-09-01', 1, NULL, 0);
+<<<<<<< HEAD
+=======
+>>>>>>> codaym
 >>>>>>> codaym
 
 --
@@ -464,6 +519,9 @@ ALTER TABLE `tblarea`
 ALTER TABLE `tblausencias`
   ADD PRIMARY KEY (`AusCodigo`),
 <<<<<<< HEAD
+  ADD KEY `FK2 UsuCedula` (`AusForUsuar`);
+=======
+<<<<<<< HEAD
   ADD KEY `FK2 UsuCedulaF` (`AusForUsuCed`),
   ADD KEY `FK2 AusTipo2` (`AusForTipAus`);
 
@@ -474,6 +532,7 @@ ALTER TABLE `tblcontratos`
   ADD PRIMARY KEY (`ContId`);
 =======
   ADD KEY `FK2 UsuCedula` (`AusForUsuar`);
+>>>>>>> codaym
 >>>>>>> codaym
 
 --
@@ -493,6 +552,8 @@ ALTER TABLE `tblevaluaciones`
   ADD KEY `FK2 AreCodigo` (`EvaForArea`);
 
 --
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 -- Indices de la tabla `tblexperiencia`
 --
@@ -527,11 +588,15 @@ ALTER TABLE `tblhisevaluacionesr`
 ALTER TABLE `tblhorarios`
   ADD PRIMARY KEY (`horarIdPK`);
 =======
+>>>>>>> codaym
 -- Indices de la tabla `tblhistovaca`
 --
 ALTER TABLE `tblhistovaca`
   ADD PRIMARY KEY (`HisCodigo`),
   ADD KEY `FK2 UsuCedulaF` (`HisForUsuCed`);
+<<<<<<< HEAD
+=======
+>>>>>>> codaym
 >>>>>>> codaym
 
 --
@@ -553,6 +618,10 @@ ALTER TABLE `tblpreguntaseva`
 ALTER TABLE `tblresultadoeva`
   ADD PRIMARY KEY (`ResCodigo`),
 <<<<<<< HEAD
+  ADD KEY `FK3 UsuCedula` (`ResForUsuario`),
+  ADD KEY `FK2 CriCod` (`ResForPregun`);
+=======
+<<<<<<< HEAD
   ADD KEY `FK2 CriCod` (`ResForPregun`),
   ADD KEY `FK2 EvrHistor` (`ResForEvrHis`);
 
@@ -565,6 +634,7 @@ ALTER TABLE `tbltiposausen`
   ADD KEY `FK3 UsuCedula` (`ResForUsuario`),
   ADD KEY `FK2 CriCod` (`ResForPregun`);
 >>>>>>> codaym
+>>>>>>> codaym
 
 --
 -- Indices de la tabla `tblusuario`
@@ -573,11 +643,15 @@ ALTER TABLE `tblusuario`
   ADD PRIMARY KEY (`UsuCedula`),
   ADD KEY `FK PerCodigo` (`UsuForaPerfil`),
 <<<<<<< HEAD
+  ADD KEY `FK1 AreCodigo` (`UsuForaArea`);
+=======
+<<<<<<< HEAD
   ADD KEY `FK1 AreCodigo` (`UsuForaArea`),
   ADD KEY `FK2 HoraId` (`UsuHorario`),
   ADD KEY `FK3 ContratoId` (`UsuTipoContra`);
 =======
   ADD KEY `FK1 AreCodigo` (`UsuForaArea`);
+>>>>>>> codaym
 >>>>>>> codaym
 
 --
@@ -585,6 +659,8 @@ ALTER TABLE `tblusuario`
 --
 
 --
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 -- AUTO_INCREMENT de la tabla `tblausencias`
 --
@@ -600,6 +676,7 @@ ALTER TABLE `tblcontratos`
 --
 =======
 >>>>>>> codaym
+>>>>>>> codaym
 -- AUTO_INCREMENT de la tabla `tbldocumento`
 --
 ALTER TABLE `tbldocumento`
@@ -612,6 +689,8 @@ ALTER TABLE `tblevaluaciones`
   MODIFY `EvaCodigo` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 -- AUTO_INCREMENT de la tabla `tblexperiencia`
 --
@@ -636,10 +715,14 @@ ALTER TABLE `tblfuncionescar`
 ALTER TABLE `tblhorarios`
   MODIFY `horarIdPK` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 =======
+>>>>>>> codaym
 -- AUTO_INCREMENT de la tabla `tblhistovaca`
 --
 ALTER TABLE `tblhistovaca`
   MODIFY `HisCodigo` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+<<<<<<< HEAD
+=======
+>>>>>>> codaym
 >>>>>>> codaym
 
 --
@@ -653,6 +736,9 @@ ALTER TABLE `tblpreguntaseva`
 --
 ALTER TABLE `tblresultadoeva`
 <<<<<<< HEAD
+  MODIFY `ResCodigo` int(12) NOT NULL AUTO_INCREMENT;
+=======
+<<<<<<< HEAD
   MODIFY `ResCodigo` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
@@ -662,6 +748,7 @@ ALTER TABLE `tbltiposausen`
   MODIFY `TipID` int(3) NOT NULL AUTO_INCREMENT;
 =======
   MODIFY `ResCodigo` int(12) NOT NULL AUTO_INCREMENT;
+>>>>>>> codaym
 >>>>>>> codaym
 
 --
@@ -673,10 +760,14 @@ ALTER TABLE `tbltiposausen`
 --
 ALTER TABLE `tblausencias`
 <<<<<<< HEAD
+  ADD CONSTRAINT `FK2 UsuCedula` FOREIGN KEY (`AusForUsuar`) REFERENCES `tblusuario` (`UsuCedula`) ON DELETE CASCADE ON UPDATE CASCADE;
+=======
+<<<<<<< HEAD
   ADD CONSTRAINT `FK1 UsuCedaus` FOREIGN KEY (`AusForUsuCed`) REFERENCES `tblusuario` (`UsuCedula`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `FK2 AusTipo2` FOREIGN KEY (`AusForTipAus`) REFERENCES `tbltiposausen` (`TipID`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 =======
   ADD CONSTRAINT `FK2 UsuCedula` FOREIGN KEY (`AusForUsuar`) REFERENCES `tblusuario` (`UsuCedula`) ON DELETE CASCADE ON UPDATE CASCADE;
+>>>>>>> codaym
 >>>>>>> codaym
 
 --
@@ -692,6 +783,8 @@ ALTER TABLE `tblevaluaciones`
   ADD CONSTRAINT `FK2 AreCodigo` FOREIGN KEY (`EvaForArea`) REFERENCES `tblarea` (`AreCodigo`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 -- Filtros para la tabla `tblexperiencia`
 --
@@ -716,10 +809,14 @@ ALTER TABLE `tblfuncionescar`
 ALTER TABLE `tblhisevaluacionesr`
   ADD CONSTRAINT `FK1 EvRUsuario` FOREIGN KEY (`EvRForUsuario`) REFERENCES `tblusuario` (`UsuCedula`) ON DELETE CASCADE ON UPDATE CASCADE;
 =======
+>>>>>>> codaym
 -- Filtros para la tabla `tblhistovaca`
 --
 ALTER TABLE `tblhistovaca`
   ADD CONSTRAINT `FK2 UsuCedulaF` FOREIGN KEY (`HisForUsuCed`) REFERENCES `tblusuario` (`UsuCedula`) ON DELETE CASCADE;
+<<<<<<< HEAD
+=======
+>>>>>>> codaym
 >>>>>>> codaym
 
 --
@@ -733,11 +830,16 @@ ALTER TABLE `tblpreguntaseva`
 --
 ALTER TABLE `tblresultadoeva`
 <<<<<<< HEAD
+  ADD CONSTRAINT `FK2 CriCod` FOREIGN KEY (`ResForPregun`) REFERENCES `tblpreguntaseva` (`CriCodigo`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `FK3 UsuCedula` FOREIGN KEY (`ResForUsuario`) REFERENCES `tblusuario` (`UsuCedula`) ON DELETE CASCADE ON UPDATE CASCADE;
+=======
+<<<<<<< HEAD
   ADD CONSTRAINT `FK2 CriCod` FOREIGN KEY (`ResForPregun`) REFERENCES `tblpreguntaseva` (`CriCodigo`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `FK2 EvrHistor` FOREIGN KEY (`ResForEvrHis`) REFERENCES `tblhisevaluacionesr` (`EvRCodigo`) ON DELETE CASCADE ON UPDATE CASCADE;
 =======
   ADD CONSTRAINT `FK2 CriCod` FOREIGN KEY (`ResForPregun`) REFERENCES `tblpreguntaseva` (`CriCodigo`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `FK3 UsuCedula` FOREIGN KEY (`ResForUsuario`) REFERENCES `tblusuario` (`UsuCedula`) ON DELETE CASCADE ON UPDATE CASCADE;
+>>>>>>> codaym
 >>>>>>> codaym
 
 --
@@ -746,11 +848,15 @@ ALTER TABLE `tblresultadoeva`
 ALTER TABLE `tblusuario`
   ADD CONSTRAINT `FK PerCodigo` FOREIGN KEY (`UsuForaPerfil`) REFERENCES `tblperfiles` (`PerCodigo`) ON DELETE CASCADE ON UPDATE CASCADE,
 <<<<<<< HEAD
+  ADD CONSTRAINT `FK1 AreCodigo` FOREIGN KEY (`UsuForaArea`) REFERENCES `tblarea` (`AreCodigo`) ON DELETE CASCADE ON UPDATE CASCADE;
+=======
+<<<<<<< HEAD
   ADD CONSTRAINT `FK1 AreCodigo` FOREIGN KEY (`UsuForaArea`) REFERENCES `tblarea` (`AreCodigo`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `FK2 HoraId` FOREIGN KEY (`UsuHorario`) REFERENCES `tblhorarios` (`horarIdPK`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `FK3 ContratoId` FOREIGN KEY (`UsuTipoContra`) REFERENCES `tblcontratos` (`ContId`) ON DELETE CASCADE ON UPDATE CASCADE;
 =======
   ADD CONSTRAINT `FK1 AreCodigo` FOREIGN KEY (`UsuForaArea`) REFERENCES `tblarea` (`AreCodigo`) ON DELETE CASCADE ON UPDATE CASCADE;
+>>>>>>> codaym
 >>>>>>> codaym
 COMMIT;
 

@@ -73,7 +73,6 @@ require("sesionCompartida.php");
         $miContador++;
     }
 }
-
 $hoy = new DateTime('now', new DateTimeZone('America/Bogota')); 
 $finaly= $hoy->format('Y-m-d');
 
