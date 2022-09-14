@@ -1,0 +1,40 @@
+.cuerpo {
+    position: relative;
+    height: 80em;
+    width: 100em;
+}
+
+.titlePag h1 {
+    margin: auto;
+}
+
+#tit {
+    position: absolute;
+    display: inline;
+}
+
+#logos {
+    position: inherit;
+    width: 100%;
+    height: 50%;
+    margin-top: 7%;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#logos ul {
+    display: inline-block;
+    list-style: none;
+}
+
+#logos ul li {
+    display: inline-block;
+}
+
+#logoUnix {
+    position: absolute;
+    width: 150px;
+    height: 170px;
+    bottom: 0;
+    right: 0;
+}

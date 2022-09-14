@@ -1,6 +1,6 @@
 <?php
 
-	$conexion=mysqli_connect("localhost", "root", "", "sgdrrhhbd");
+	require("conexionBD.php");
 	if($conexion->connect_error){
 		echo "fallo la conexion";
 	}
