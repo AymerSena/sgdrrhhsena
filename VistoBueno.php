@@ -1,27 +1,55 @@
-<?php include('Template/cabecera.php'); ?>
-    <div id="Menu">
-        <form action="AccionVB.php" method="GET">
-            <h1 id="tit">Visto bueno</h1>
+<?php
+require("sesionJefe.php");
+?>
 
-            <label for="empleados">lista empleados</label>
-            <p style="float: right;">Dias acumulados por el empleado: 15 </p>
-            <select name="empleados" id="empleados">
-            <br>
-        <option  selected disabled="seleccion">Seleccione empleado</option>
-          <option value="Aymer">Aymer</option>
-          <option value="Miguel">Miguel</option>
-          <option value="David">David</option>
-          <option value="Johan">Johan</option>
-          <option value="Ivan">Ivan</option>
-          <br>  
-          <br>    
-          <textarea name="textarea" id="textarea" placeholder="Añadir comentarios" cols="135" rows="10"></textarea> 
-        <br>
-        <input type="submit" onclick="alert('Visto bueno cargado');"value="enviar" style="float: right;">
-        </form>
-    </div>
-    <br>
-    <br>
-    
-</div>
-<?php include('Template/pie.php'); ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/plantillaConten.css">
+    <title>Menu jefe</title>
+</head>
+
+<body>
+<?php
+    include("cabecera.php");
+?>
+
+
+
+<?php
+require("conexionBD.php");
+$valor = $_GET["id"];
+if (isset($_POST["runEstado"])) {
+    $estado=$_POST["estadoNew"];
+    $senteciaSQL="UPDATE tblausencias SET AusEstado='$estado' WHERE AusCodigo=$valor;";
+    $runComandSQL= $conexion->query($senteciaSQL);
+    ?>
+    <script>
+        alert("Se genero el cambio de la ausencia");
+        window.location.href="menuJefeVistosBuenos.php";
+    </script>
+    <?php
+}
+
+?>
+
+<form action="" method="post">
+    <label for="">Nuevo estado</label>
+    <select name="estadoNew" id="">
+        <option value="VistoBueno">Dar visto bueno</option>
+        <option value="Denegado">Demegar el visto bueno</option>
+    </select>
+    <button name="runEstado">Aceptar</button>
+    <button><a href="menuJefeVistosBuenos.php">Cancelar</a></button>
+</form>
+
+<?php
+    include("pie.php");
+    ?>
+</body>
+
+</html>
