@@ -20,6 +20,12 @@ class areasorg{
         $run=$conexion->query($senteSQL);
         return $run;
     }
+    public function consultarPorIdArea($idArea){
+        require("./conexionBD.php");
+        $senteSQL="SELECT * FROM tblarea WHERE AreCodigo='$idArea'";
+        $run=$conexion->query($senteSQL);
+        return $run;
+    }
     
 }
 

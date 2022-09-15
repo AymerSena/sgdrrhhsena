@@ -29,5 +29,10 @@ class usuario{
         $runSQL=$conexion->query($sentSQL);
         return $runSQL;
     }
+    public function actualizarDataSensi($documento,$nombre,$apellidos,$cargo,$genero,$eps,$telefono,$barrio,$direccion,$nacimiento,$expedicion,$mail,$rh,$contrato,$hijos,$area,$vacaciones,$salario){
+        require("./conexionBD.php");
+        $sentSQL= "UPDATE tblusuario SET UsuNombre='$nombre', UsuApellido='$apellidos',UsuCargo='$cargo', UsuGenero='$genero',UsuEps='$eps',UsuFechaExpCc='$expedicion',UsuNoHijos='$hijos',UsuForaArea='$area',UsuDiasAcuVacaci='$vacaciones',UsuSalario='$salario',UsuTipoSangre='$rh',UsuFechaContrato='$contrato',UsuDireccion='$direccion',UsuFechaNaci='$nacimiento',UsuBarrio='$barrio',UsuCorreo='$mail',UsuTelefono='$telefono' WHERE UsuCedula='$documento'";
+        $optenerResult=$conexion->query($sentSQL);
+    }
 }
 ?>
