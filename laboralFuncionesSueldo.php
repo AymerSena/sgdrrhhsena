@@ -4,6 +4,7 @@ require('classphp/fpdf/fpdf.php');
 
     session_start();
     require("conexionBD.php");
+    $DateAndTime = date('d-m-Y'); 
     $documento=$_SESSION["idUs"];
     $querySql = "SELECT * FROM tblusuario WHERE UsuCedula=$documento";
     $resultados = $conexion -> query($querySql);
@@ -52,7 +53,7 @@ function Footer()
 $bod=utf8_decode("El (la) Señor(a) $namePersonJob $lastNamePerJob, identificado(a) con CC No. $documento de ");
 $bod1=utf8_decode("BOGOTA D.C., está vinculad(a) a la compañía desde el día $fechaContrato con un");
 $bod2=utf8_decode("contrato de trabajo a $tipoContrato. Actualmente se desempeña en el cargo de $cargoJobFun.");
-$bod3=utf8_decode("El presente certificado se expide a solicitud del interesado(a) el 03 de marzo de 2022, en la");
+$bod3=utf8_decode("El presente certificado se expide a solicitud del interesado(a) el $DateAndTime, en la");
 $bod4=utf8_decode("ciudad de BOGOTA D.C.");
 $bod5=utf8_decode("El funcionario tiene las siguientes funciones correspondientes al cargo.");
 $bod6=utf8_decode("Atentamente,");
@@ -70,7 +71,7 @@ $pdf->Ln(1);
 $pdf->Cell(78);
 $pdf->Cell(0,20,'CERTIFICA QUE:',0,1);
 $pdf->Ln(10);
-$pdf->MultiCell(0,5,utf8_decode("El (la) Señor(a) $namePersonJob $lastNamePerJob, identificado(a) con CC No. $documento de BOGOTA D.C., está vinculad(a) a la compañía desde el día $fechaContrato con un contrato de trabajo a $tipoContrato. Actualmente se desempeña en el cargo de $cargoJobFun. Develgando un salario Básico de $ $jobsueldo."));
+$pdf->MultiCell(0,5,utf8_decode("El (la) Señor(a) $namePersonJob $lastNamePerJob, identificado(a) con CC No. $documento de BOGOTA D.C., está vinculad(a) a la compañía desde el día $fechaContrato con un contrato de trabajo a $tipoContrato. Actualmente se desempeña en el cargo de $cargoJobFun. Develgando un salario Básico de $ $jobsueldo. El presente certificado se expide a solicitud del interesado(a) el $DateAndTime"));
 $pdf->Ln(5);
 $pdf->Cell(0,10,$bod5,0,1,"C");
 $pdf->Ln(5);

@@ -5,6 +5,7 @@ require('classphp/fpdf/fpdf.php');
 
     
     require("conexionBD.php");
+    $DateAndTime = date('d-m-Y'); 
     $documento=$_SESSION["idUs"];
     $querySql = "SELECT * FROM tblusuario WHERE UsuCedula=$documento";
     $resultados = $conexion -> query($querySql);
@@ -65,7 +66,7 @@ $pdf->Ln(1);
 $pdf->Cell(78);
 $pdf->Cell(0,50,'CERTIFICA QUE:',0,1);
 $pdf->Ln(10);
-$pdf->MultiCell(0,7,utf8_decode("El (la) Señor(a) $namePersonJob $lastNamePerJob, identificado(a) con CC No. $documento de BOGOTA D.C., está vinculad(a) a la compañía desde el día $fechaContrato con un contrato de trabajo a $tipoContrato. Actualmente se desempeña en el cargo de $cargoJobFun. El presente certificado se expide a solicitud del interesado(a) el 03 de marzo de 2022, en la ciudad de BOGOTA D.C"));
+$pdf->MultiCell(0,7,utf8_decode("El (la) Señor(a) $namePersonJob $lastNamePerJob, identificado(a) con CC No. $documento de BOGOTA D.C., está vinculad(a) a la compañía desde el día $fechaContrato con un contrato de trabajo a $tipoContrato. Actualmente se desempeña en el cargo de $cargoJobFun. El presente certificado se expide a solicitud del interesado(a) el $DateAndTime, en la ciudad de BOGOTA D.C"));
 $pdf->Cell(0,90,$bod5,0,1,"L");
 $pdf->Ln(3);
 $pdf->Image('https://vapor-us-east-1-dev-uploads-1603425924.s3.amazonaws.com/sample/8fccc6014f64d1cadd296467befcb17a-Firma-8.png');
