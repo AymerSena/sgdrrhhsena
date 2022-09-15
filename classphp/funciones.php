@@ -2,7 +2,7 @@
 class funciones{
     public function agregarFuncion($titulo,$descripcion,$idDocumento){
         require("./conexionBD.php");
-        $sentSQL= "INSERT INTO tblfuncionescar (FunTitulo, FunDescripcion,FunForUsuDocumen) VALUES ($titulo,$descripcion,$idDocumento)";
+        $sentSQL= "INSERT INTO tblfuncionescar (FunTitulo, FunDescripcion,FunForUsuDocumen) VALUES ('$titulo','$descripcion','$idDocumento')";
         $run=$conexion->query($sentSQL);
     }
     public function modificarFunciones($titulo,$descripcion,$idRegistro){
@@ -17,9 +17,15 @@ class funciones{
     }
     public function consultarFuncionesPorfuncio($idFuncio){
         require("./conexionBD.php");
-        $sentSQL="SELECT * FROM tblfuncionescar WHERE FunId='$idFuncio'";
+        $sentSQL="SELECT * FROM tblfuncionescar WHERE FunForUsuDocumen='$idFuncio'";
         $runSQL=$conexion->query($sentSQL);
         return $runSQL;
+    }
+    public function consultarPorRegistro($idRegistro){
+        require("./conexionBD.php");
+        $sentSQL="SELECT * FROM tblfuncionescar WHERE FunId='$idRegistro'";
+        $runSql=$conexion->query($sentSQL);
+        return $runSql;
     }
 }
 ?>

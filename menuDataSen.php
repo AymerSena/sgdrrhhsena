@@ -49,14 +49,15 @@ $classAreas= new areasorg();
                 echo "<td>".$row["UsuNombre"]."</td>";
                 echo "<td>".$row["UsuApellido"]."</td>";
                 echo "<td>".$row["UsuCargo"]."</td>";
-                echo "<td>"."Gestionar Datos"."</td>";
-                echo "<td>"."Gestionar funciones"."</td>";
+                echo "<td><a href="."dataSensible.php?id=".$row["UsuCedula"].">Funciones</a></td>";
+                echo "<td><a href="."gestionFunciones.php?id=".$row["UsuCedula"].">Funciones</a></td>";
                 echo "</tr>";
             }
         }
         
             ?>
         </table>
+        <button><a href="menuRRHH.php">Volver al menú</a></button>
     </form>
     </div>
     <?php
