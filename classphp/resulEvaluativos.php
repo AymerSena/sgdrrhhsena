@@ -1,3 +1,4 @@
+
 <?php
 class resulEvalutivos{
     public function insertHistRest($fecha,$idFuncionario,$idEvaluacionAsoc){
@@ -18,11 +19,32 @@ class resulEvalutivos{
         $runSent=$conexion->query($sentSql);
         return $runSent;
     }
-    public function promedioPorEvaluacion($evalu){
+    public function sumaReulPorEvaluacion($evalu){
         require("./conexionBD.php");
-        $sentSQL1="SELECT evh.EvRForEvaluacion, SUM(evr.SELECT COUNT(EvRForEvaluacion) FROM ResNota) FROM tblhisevaluacionesr evh INNER JOIN tblresultadoeva evr ON evh.EvRCodigo=evr.ResForEvrHis WHERE evh.EvRForEvaluacion='$evalu'";
+        $sentSQL1="SELECT SUM(res.ResNota) FROM tblresultadoeva res INNER JOIN tblhisevaluacionesr his ON his.EvRCodigo = res.ResForEvrHis INNER JOIN tblevaluaciones eva ON his.EvRForEvaluacion=eva.EvaCodigo WHERE his.EvRForEvaluacion='$evalu'";
         $runFiSql=$conexion->query($sentSQL1);
         return $runFiSql;
+    }
+    public function cuentaEVAL(){
+        require("./conexionBD.php");
+        $sentSQL="SELECT COUNT(EvRForEvaluacion) FROM tblhisevaluacionesr GROUP BY EvRForEvaluacion";//suma evaluaciones realizadas
+        $run=$conexion->query($sentSQL);
+        return $run;
+        
+    }
+    public function sumaEval(){
+        require("./conexionBD.php");
+        $sentSQL="SELECT SUM(res.ResNota) FROM tblresultadoeva res INNER JOIN tblhisevaluacionesr his ON his.EvRCodigo = res.ResForEvrHis INNER JOIN tblevaluaciones eva ON his.EvRForEvaluacion=eva.EvaCodigo GROUP BY eva.EvaNombre";
+        $run=$conexion->query($sentSQL);
+        return $run;
+
+    }
+
+    public function tablaGeneral(){
+        require("./conexionBD.php");
+        $sentSQL="SELECT  his.EvRCodigo, his.EvRFecha, 	his.EvRForUsuario, 	his.EvRForEvaluacion, SUM(res.ResNota) FROM tblhisevaluacionesr his INNER JOIN tblresultadoeva res ON his.EvRCodigo=res.ResForEvrHis GROUP BY his.EvRCodigo";
+        $run=$conexion->query($sentSQL);
+        return $run;
     }
 }
 ?>

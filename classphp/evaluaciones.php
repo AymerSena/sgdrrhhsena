@@ -33,6 +33,13 @@ class evaluaciones {
         $senteSQL="UPDATE tblevaluaciones SET EvaNombre='$n',EvaDescripcion='$d' WHERE EvaCodigo='$a'";
         $runSQL= $conexion->query($senteSQL);
     }
+
+    public function consultarEvaluaciones(){
+        require("./conexionBD.php");
+        $senteSQL="SELECT EvaNombre FROM tblevaluaciones";
+        $runSQL= $conexion->query($senteSQL);
+        return $runSQL;
+    }
     
 
 }
