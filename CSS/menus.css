@@ -1,16 +1,17 @@
 div#Menu {
   position: relative;
-  width: 100%;
+  width: 20%;
   margin: auto;
 }
 
-#title {
+#tit {
   margin: 20px;
+  color: rebeccapurple;
 }
 
 #logonav {
   position: relative;
-  width: 90%;
+  width: 70%;
   height: 50%;
   margin-top: 7%;
   margin-left: 10px;
@@ -22,12 +23,16 @@ div#Menu {
 
 #logonav ul {
   display: flex;
+  width: 80%;
+  
 
 }
 
 #logonav ul li {
   position: relative;
   list-style: none;
+  text-align: center;
+  
 }
 
 #logonav ul li a{
@@ -36,9 +41,11 @@ div#Menu {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin: 25px;
 
 }
-a .logito ion-icon{
-  font-size: 200px;
+#logonav ul li a .logito ion-icon{
+  font-size: 150px;
+  color: black;
 }
 

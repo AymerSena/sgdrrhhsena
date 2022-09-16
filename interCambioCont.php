@@ -1,25 +1,24 @@
 <?php
 require("classphp/contrasena.php");
-$classPws= new contrasena();
-$docuFun=$_GET["no"];
+$classPws = new contrasena();
+$docuFun = $_GET["no"];
 
 if (isset($_POST["run"])) {
-    if ($_POST["contrNw"]=$_POST["contrNw2"]) {
-        $pas=$classPws->actualizarPasword($_POST["contrNw"],$docuFun);
-        ?>
+    if ($_POST["contrNw"] = $_POST["contrNw2"]) {
+        $pas = $classPws->actualizarPasword($_POST["contrNw"], $docuFun);
+?>
         <script>
             alert("Fue cambiada la contraseña");
-            window.location.href="index.php";
+            window.location.href = "index.php";
         </script>
-        <?php
-    }else {
-        ?>
+    <?php
+    } else {
+    ?>
         <script>
             alert("las contraseñas no coinciden");
         </script>
-        <?php
+<?php
     }
-    
 }
 ?>
 <!DOCTYPE html>
@@ -42,9 +41,10 @@ if (isset($_POST["run"])) {
         <form method="POST">
             <input type="text" placeholder="Nueva contraseña" name="contrNw"><br><br>
             <input type="password" placeholder="Repetir contraseña" name="contrNw2"><br><br>
-            <button id="boton" type="submit" name="run">Iniciar sesión</button><br><br>
+            <button class="rounded" id="boton" type="submit" name="run">Iniciar sesión</button><br><br>
         </form>
     </section>
     <!--subido... linea de texto -->
 </body>
+
 </html>

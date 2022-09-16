@@ -1,6 +1,6 @@
 <?php
 
-$conexion= mysqli_connect("localhost","root","","sgdrrhhbd");
+$conexion = mysqli_connect("localhost", "root", "", "sgdrrhhbd");
 require("sesionCompartida.php");
 if (isset($_POST["redireccionar"])) {
     header("Location: MenuEmpleadoVaca.php");
@@ -19,61 +19,61 @@ if (isset($_POST["redireccionar"])) {
 </head>
 
 <body>
-<?php
+    <?php
     include("cabecera.php");
-?>
+    ?>
 
-<br>
- <table border="3">
-     <tr>
-         <td>codigo</td>
-         <td>tipo de ausencia</td>
-         <td>fecha de inicio</td>
-         <td>fecha de regreso </td>
-         <td>fecha de solicitud</td>
-         <td>estado</td>
-         <td>usuario credencial</td>
-         <td>días de solicitud</td>
-         <td>documento</td>
-            
-     </tr>
-<?php
-$documento=$_SESSION["idUs"];
-$querySql = "SELECT * FROM tblusuario WHERE UsuCedula=$documento";
+    <br>
+    <table border="3">
+        <tr>
+            <td>codigo</td>
+            <td>tipo de ausencia</td>
+            <td>fecha de inicio</td>
+            <td>fecha de regreso </td>
+            <td>fecha de solicitud</td>
+            <td>estado</td>
+            <td>usuario credencial</td>
+            <td>días de solicitud</td>
+            <td>documento</td>
 
-$sql="SELECT * from `tblausencias` WHERE AusForUsuCed=$documento";
-$result=mysqli_query($conexion,$sql);
+        </tr>
+        <?php
+        $documento = $_SESSION["idUs"];
+        $querySql = "SELECT * FROM tblusuario WHERE UsuCedula=$documento";
 
-while ($mostrar=mysqli_fetch_array($result)){ 
-    $idause=$mostrar["AusForTipAus"];
-    $nombrSQL="SELECT TipTipo FROM tbltiposausen WHERE TipID='$idause'";
-    $run=$conexion->query($nombrSQL);
-    $recorrer=$run->fetch_array();
-?>
+        $sql = "SELECT * from `tblausencias` WHERE AusForUsuCed=$documento";
+        $result = mysqli_query($conexion, $sql);
 
-     <tr>
-         <td> <?php  echo $mostrar["AusCodigo"]?></td>
-         <td> <?php  echo $recorrer[0];?></td>
-         <td> <?php  echo $mostrar["AusFechaInicio"]?></td>
-         <td> <?php  echo $mostrar["AusFechaRegreso"]?></td>
-         <td> <?php  echo $mostrar["AusFechaSolicitud"]?></td>
-         <td> <?php  echo $mostrar["AusEstado"]?></td>
-         <td> <?php  echo $mostrar["AusForUsuCed"] ?></td>
-         <td> <?php  echo $mostrar["AusDiasSolici"] ?></td>
-         <td> <?php  echo $mostrar["AusDocumen"] ?></td>
-         
-     </tr>
+        while ($mostrar = mysqli_fetch_array($result)) {
+            $idause = $mostrar["AusForTipAus"];
+            $nombrSQL = "SELECT TipTipo FROM tbltiposausen WHERE TipID='$idause'";
+            $run = $conexion->query($nombrSQL);
+            $recorrer = $run->fetch_array();
+        ?>
 
-<?php 
+            <tr>
+                <td> <?php echo $mostrar["AusCodigo"] ?></td>
+                <td> <?php echo $recorrer[0]; ?></td>
+                <td> <?php echo $mostrar["AusFechaInicio"] ?></td>
+                <td> <?php echo $mostrar["AusFechaRegreso"] ?></td>
+                <td> <?php echo $mostrar["AusFechaSolicitud"] ?></td>
+                <td> <?php echo $mostrar["AusEstado"] ?></td>
+                <td> <?php echo $mostrar["AusForUsuCed"] ?></td>
+                <td> <?php echo $mostrar["AusDiasSolici"] ?></td>
+                <td> <?php echo $mostrar["AusDocumen"] ?></td>
 
- }
-?> 
+            </tr>
 
- </table>
-    
- <form action="" method="post">
-    <button name="redireccionar">Volver al menú</button>
-</form>
+        <?php
+
+        }
+        ?>
+
+    </table>
+
+    <form action="" method="post">
+        <button class="rounded" name="redireccionar">Volver al menú</button>
+    </form>
 
 
 </body>

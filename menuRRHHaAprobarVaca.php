@@ -1,6 +1,6 @@
 <?php
 require("sesionRRHH.php");
-require ("conexionBD.php");
+require("conexionBD.php");
 /*$documento=$_SESSION["idUs"];
 $querySql0 = "SELECT UsuForaArea FROM tblusuario WHERE UsuCedula='$documento'";
 $result0=mysqli_query($conexion,$querySql0);
@@ -23,83 +23,85 @@ foreach($result0 as $row) {
 </head>
 
 <body>
-<?php
+    <?php
     include("cabecera.php");
-?>
+    ?>
 
 
-<?php
+    <?php
 
-//$conexion= mysqli_connect("localhost","root","","sgdrrhhbd");//
+    //$conexion= mysqli_connect("localhost","root","","sgdrrhhbd");//
 
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La tabla</title>
+    ?>
+    <!DOCTYPE html>
+    <html lang="en">
 
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>La tabla</title>
 
-<br>
+    </head>
 
- <table border="3">
-     <tr>
-         <td>codigo</td>
-         <td>tipo de ausencia</td>
-         <td>fecha de inicio</td>
-         <td>fecha de regreso </td>
-         <td>fecha de solicitud</td>
-         <td>estado</td>
-         <td>usuario credencial</td>
-         <td>días de solicitud</td>
-         <td>documento</td>
-         <td>Asignación</td>    
-     </tr>
-<?php
+    <body>
 
-/*$querySql = "SELECT UsuForaArea FROM `tblusuario` WHERE `UsuCedula`='$documento'";
+        <br>
+
+        <table border="3">
+            <tr>
+                <td>codigo</td>
+                <td>tipo de ausencia</td>
+                <td>fecha de inicio</td>
+                <td>fecha de regreso </td>
+                <td>fecha de solicitud</td>
+                <td>estado</td>
+                <td>usuario credencial</td>
+                <td>días de solicitud</td>
+                <td>documento</td>
+                <td>Asignación</td>
+            </tr>
+            <?php
+
+            /*$querySql = "SELECT UsuForaArea FROM `tblusuario` WHERE `UsuCedula`='$documento'";
 
 $result1=$conexion->query($querySql);
 foreach( $result1 as $row){
     $idArea1= $row["UsuForaArea"];
 }*/
-$sql="SELECT * FROM tblausencias WHERE AusEstado='VistoBueno'";
-$result=mysqli_query($conexion,$sql);
-//$result=$conexion->query($sql);//
+            $sql = "SELECT * FROM tblausencias WHERE AusEstado='VistoBueno'";
+            $result = mysqli_query($conexion, $sql);
+            //$result=$conexion->query($sql);//
 
 
-while ($mostrar=mysqli_fetch_array($result)){ 
-    $idause=$mostrar["AusForTipAus"];
-    $nombrSQL="SELECT TipTipo FROM tbltiposausen WHERE TipID='$idause'";
-    $run=$conexion->query($nombrSQL);
-    $recorrer=$run->fetch_array();
-?>
+            while ($mostrar = mysqli_fetch_array($result)) {
+                $idause = $mostrar["AusForTipAus"];
+                $nombrSQL = "SELECT TipTipo FROM tbltiposausen WHERE TipID='$idause'";
+                $run = $conexion->query($nombrSQL);
+                $recorrer = $run->fetch_array();
+            ?>
 
-     <tr>
-         <td> <?php  echo $mostrar["AusCodigo"]?></td>
-         <td> <?php  echo $recorrer[0];?></td>
-         <td> <?php  echo $mostrar["AusFechaInicio"]?></td>
-         <td> <?php  echo $mostrar["AusFechaRegreso"]?></td>
-         <td> <?php  echo $mostrar["AusFechaSolicitud"]?></td>
-         <td> <?php  echo $mostrar["AusEstado"]?></td>
-         <td> <?php  echo $mostrar["AusForUsuCed"] ?></td>
-         <td> <?php  echo $mostrar["AusDiasSolici"] ?></td>
-         <td> <?php  echo $mostrar["AusDocumen"] ?></td>
-         <td><a href="menuRRHHaAprobarVacaTabla.php?id=<?php echo $mostrar["AusCodigo"];?> "><button>Gestionar</button></a></td>
-     </tr>
+                <tr>
+                    <td> <?php echo $mostrar["AusCodigo"] ?></td>
+                    <td> <?php echo $recorrer[0]; ?></td>
+                    <td> <?php echo $mostrar["AusFechaInicio"] ?></td>
+                    <td> <?php echo $mostrar["AusFechaRegreso"] ?></td>
+                    <td> <?php echo $mostrar["AusFechaSolicitud"] ?></td>
+                    <td> <?php echo $mostrar["AusEstado"] ?></td>
+                    <td> <?php echo $mostrar["AusForUsuCed"] ?></td>
+                    <td> <?php echo $mostrar["AusDiasSolici"] ?></td>
+                    <td> <?php echo $mostrar["AusDocumen"] ?></td>
+                    <td><a href="menuRRHHaAprobarVacaTabla.php?id=<?php echo $mostrar["AusCodigo"]; ?> "><button class="rounded">Gestionar</button></a></td>
+                </tr>
 
-<?php 
- }
-?> 
- </table>
-<?php
+            <?php
+            }
+            ?>
+        </table>
+        <?php
 
-    include("pie.php");
-    ?>
-</body>
+        include("pie.php");
+        ?>
+    </body>
 
-</html>
+    </html>

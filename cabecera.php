@@ -13,41 +13,44 @@ include("constaVari.php");
     <link rel="stylesheet" href="CSS/template.css">
     <link rel="stylesheet" href="CSS/changepassw.css">
     <link rel="stylesheet" href="CSS/submenu.css">
-    <link rel="stylesheet" href="CSS/menus.css">
+    <link rel="stylesheet" href="menus.css">
+    <link rel="stylesheet" href="CSS/css2/botones.css">
+    <link rel="stylesheet" href="CSS/css2/formularios.css">
 </head>
+
 <body>
-<?php
-                    require("conexionBD.php");
-                    $documentoFunLoguea=$_SESSION["idUs"];
-                    $query=$conexion->query("SELECT * FROM tblusuario WHERE UsuCedula='$documentoFunLoguea'");
-                    while ($row = $query->fetch_assoc()) {
-                        $return = $row['UsuFotoPerfil'];
-                    }
-                    if ($return==NULL){
-                        $return="https://1.bp.blogspot.com/-MeCxaLO8njU/YT5yRMu7KrI/AAAAAAAAAHI/NhoZIlmquMUWDoiVjAzF3nTF1WnwqRTSQCNcBGAsYHQ/s0/descarga.png";
-                    }
-                    // Capturar el nombre del usuario
-                    $queryName="SELECT UsuNombre, UsuApellido FROM tblusuario WHERE usuCedula='$documentoFunLoguea'";
-                    $resulName= $conexion -> query($queryName);
-                    foreach ($resulName as $fila) {
-                        $nombreUsu = $fila["UsuNombre"]." ".$fila["UsuApellido"];
-                    }
-                    ?>
+    <?php
+    require("conexionBD.php");
+    $documentoFunLoguea = $_SESSION["idUs"];
+    $query = $conexion->query("SELECT * FROM tblusuario WHERE UsuCedula='$documentoFunLoguea'");
+    while ($row = $query->fetch_assoc()) {
+        $return = $row['UsuFotoPerfil'];
+    }
+    if ($return == NULL) {
+        $return = "https://1.bp.blogspot.com/-MeCxaLO8njU/YT5yRMu7KrI/AAAAAAAAAHI/NhoZIlmquMUWDoiVjAzF3nTF1WnwqRTSQCNcBGAsYHQ/s0/descarga.png";
+    }
+    // Capturar el nombre del usuario
+    $queryName = "SELECT UsuNombre, UsuApellido FROM tblusuario WHERE usuCedula='$documentoFunLoguea'";
+    $resulName = $conexion->query($queryName);
+    foreach ($resulName as $fila) {
+        $nombreUsu = $fila["UsuNombre"] . " " . $fila["UsuApellido"];
+    }
+    ?>
     <div class="container">
         <div class="navigation">
             <ul>
                 <li>
                     <div class="photousu">
-                       <img src="<?php echo $return;?>" alt="">
+                        <img src="<?php echo $return; ?>" alt="">
                     </div>
                     <span class="user_name"><?php echo $nombreUsu; ?></span>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="photoPerfil.php">
                         <span class="icon">
-                            <ion-icon name="notifications-outline"></ion-icon>
+                            <ion-icon name="person-circle-outline"></ion-icon>
                         </span>
-                        <span class="text">Notificaciones</span>
+                        <span class="text">Foto de perfil</span>
                     </a>
                 </li>
                 <li>
@@ -105,7 +108,7 @@ include("constaVari.php");
                             </ion-icon>
                         </span>
                         <span class="text" name="cierre">Cerrar Sesión</span>
-                        
+
                     </a>
                 </li>
             </ul>
@@ -133,7 +136,7 @@ include("constaVari.php");
                             echo "<h1>Recursos Humanos</h1>";
                             break;
                         default:
-                            echo "Algo paso, por favor contacte al administrador del sistema error en codigo"; 
+                            echo "Algo paso, por favor contacte al administrador del sistema error en codigo";
                             break;
                     }
                     ?>

@@ -1,13 +1,25 @@
+form {
+    color: #FFF;
+    position: relative;
+    margin: 0 auto;
+    background-color: #0a1f92;
+    overflow: hidden;
+    width: 90%;
+    text-align: center;
+    font-size: 22px;
+    border-radius: 8px;
+    padding: 20px;
 
-input{
-    border: blue solid 2px;
 }
-select{
-    border: blue solid 2px;
+
+form input {
+    align-items: center;
+    padding: 3px;
+    margin: 8px 0px;
 }
-option{
-    font-weight: bold;
-}
-label{
-    font-weight: 550;
+
+form div input {
+    align-items: center;
+    padding: 3px;
+    margin: 8px 0px;
 }

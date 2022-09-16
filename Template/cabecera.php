@@ -6,45 +6,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-<<<<<<< HEAD
-    <link rel="stylesheet" href="CSS/template.css">
-    <link rel="stylesheet" href="CSS/changepassw.css">
-    <link rel="stylesheet" href="CSS/submenu.css">
-    <link rel="stylesheet" href="CSS/menus.css">
+    <<<<<<< HEAD <link rel="stylesheet" href="CSS/template.css">
+        <link rel="stylesheet" href="CSS/changepassw.css">
+        <link rel="stylesheet" href="CSS/submenu.css">
+        <link rel="stylesheet" href="CSS/menus.css">
 </head>
 
 =======
-    <link rel="stylesheet" href="template.css">
-    <link rel="stylesheet" href="template.css">
-    <link rel="stylesheet" href="../CSS/changepassw.css">
-    <link rel="stylesheet" href="../CSS/submenu.css">
+<link rel="stylesheet" href="template.css">
+<link rel="stylesheet" href="template.css">
+<link rel="stylesheet" href="../CSS/changepassw.css">
+<link rel="stylesheet" href="../CSS/submenu.css">
 </head>
 >>>>>>> codaym
+
 <body>
     <div class="container">
         <div class="navigation">
             <ul>
                 <li>
-<<<<<<< HEAD
-                    <a href="photoPerfil.php">
-                        <div class="photousu">
-                            <img src="https://c.tenor.com/XQXzBqs3utEAAAAd/marin-kitagawa.gif" alt="">
-                        </div>
-                        <span class="user_name">User name</span>
-                    </a>
-=======
                     <div class="photousu">
                         <img src="https://c.tenor.com/XQXzBqs3utEAAAAd/marin-kitagawa.gif" alt="">
                     </div>
                     <span class="user_name">User name</span>
->>>>>>> codaym
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="photoPerfil.php">
                         <span class="icon">
-                            <ion-icon name="notifications-outline"></ion-icon>
+                            <ion-icon name="person-circle-outline"></ion-icon>
                         </span>
-                        <span class="text">Notificaciones</span>
+                        <span class="text">Foto de perfil</span>
                     </a>
                 </li>
                 <li>
@@ -96,17 +87,16 @@
                     </a>
                 </li>
                 <li>
-<<<<<<< HEAD
-                    <a href="logout.php">
-=======
-                    <a href="../logout.php">
->>>>>>> codaym
-                        <span class="icon">
-                            <ion-icon name="log-out-outline"></ion-icon>
-                            </ion-icon>
-                        </span>
-                        <span class="text">Cerrar Sesión</span>
-                    </a>
+                    <<<<<<< HEAD <a href="logout.php">
+                        =======
+                        <a href="../logout.php">
+                            >>>>>>> codaym
+                            <span class="icon">
+                                <ion-icon name="log-out-outline"></ion-icon>
+                                </ion-icon>
+                            </span>
+                            <span class="text">Cerrar Sesión</span>
+                        </a>
                 </li>
             </ul>
         </div>
@@ -116,10 +106,9 @@
                     <ion-icon name="menu-outline"></ion-icon>
                 </div>
                 <div class="title">
-<<<<<<< HEAD
-                    <h1>Unix Storngest</h1>
-=======
-                    <h1>Menu empleado</h1>
->>>>>>> codaym
+                    <<<<<<< HEAD <h1>Unix Storngest</h1>
+                        =======
+                        <h1>Menu empleado</h1>
+                        >>>>>>> codaym
                 </div>
             </div>

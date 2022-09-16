@@ -15,14 +15,14 @@ require("sesionAdmin.php");
 </head>
 
 <body>
-<?php
+    <?php
     include("cabecera.php");
-?>
-        <div class="titlePag">
-            <h1>Crear usuario en el sistema</h1>
-        </div>
-        <div class="container">
-            <blockquote>
+    ?>
+    <div class="titlePag">
+        <h1>Crear usuario en el sistema</h1>
+    </div>
+    <div class="container">
+        <blockquote>
             <form action="" method="POST">
                 <label for="">Documento de la persona</label><br>
                 <input type="num" name="document"><br>
@@ -37,12 +37,12 @@ require("sesionAdmin.php");
                     <option value="error">Seleccione</option>
                     <?php
                     require("conexionBD.php");
-                    $consulta="SELECT * FROM tblperfiles";
-                    $result=$conexion->query($consulta);
-                    foreach($result as $row){
-                        ?>
-                        <option value="<?php echo $row['PerCodigo'];?>"><?php echo $row['PerTipo'];?></option>
-                        <?php
+                    $consulta = "SELECT * FROM tblperfiles";
+                    $result = $conexion->query($consulta);
+                    foreach ($result as $row) {
+                    ?>
+                        <option value="<?php echo $row['PerCodigo']; ?>"><?php echo $row['PerTipo']; ?></option>
+                    <?php
                     }
                     ?>
                 </select><br>
@@ -51,41 +51,41 @@ require("sesionAdmin.php");
                     <option value="error">Seleccione</option>
                     <?php
                     require("conexionBD.php");
-                    $consulta="SELECT * FROM tblarea";
-                    $result=$conexion->query($consulta);
-                    foreach($result as $row){
-                        ?>
-                        <option value="<?php echo $row['AreCodigo']; ?>"><?php echo $row['AreNombre'];?></option>
-                        <?php
+                    $consulta = "SELECT * FROM tblarea";
+                    $result = $conexion->query($consulta);
+                    foreach ($result as $row) {
+                    ?>
+                        <option value="<?php echo $row['AreCodigo']; ?>"><?php echo $row['AreNombre']; ?></option>
+                    <?php
                     }
                     ?>
                 </select><br><br>
-                <button name="enviar">Crear usuario</button>
-                <button><a href="menuAdministrador.php">Volver al menú</a></button>
+                <button class="rounded" name="enviar"><span class="text-green">Crear usuario</span></button>
+                <button class="rounded"><span class="text-green"> <a href="menuAdministrador.php">Volver al menú</a></span></button>
             </form>
-            </blockquote>
+        </blockquote>
 
 
-            <img src="https://1.bp.blogspot.com/-CRGFBvE8s8k/YT5yRhIEj8I/AAAAAAAAAHM/dplt4qgxJmcjfSP213rWRyF0EoW_BQlSACNcBGAsYHQ/s332/logoPag.png" id="logoUnix">
-        </div>
+        <img src="https://1.bp.blogspot.com/-CRGFBvE8s8k/YT5yRhIEj8I/AAAAAAAAAHM/dplt4qgxJmcjfSP213rWRyF0EoW_BQlSACNcBGAsYHQ/s332/logoPag.png" id="logoUnix">
+    </div>
     </div>
     <?php
     include("pie.php");
     ?>
-<?php
-if ($_POST) {
-    $documentoP=$_POST["document"];
-    $nombre=$_POST["firstN"];
-    $apellido=$_POST["lastN"];
-    $contrasenatmp=$_POST["contrasena"];
-    $perfilas=$_POST["perfil"];
-    $areaAsignado=$_POST["area"];
+    <?php
+    if ($_POST) {
+        $documentoP = $_POST["document"];
+        $nombre = $_POST["firstN"];
+        $apellido = $_POST["lastN"];
+        $contrasenatmp = $_POST["contrasena"];
+        $perfilas = $_POST["perfil"];
+        $areaAsignado = $_POST["area"];
 
-    $consulInsr="INSERT INTO tblusuario(UsuCedula,UsuNombre,UsuApellido,UsuContrasenaSis,UsuForaPerfil,UsuForaArea ) VALUES('$documentoP','$nombre','$apellido','$contrasenatmp','$perfilas','$areaAsignado')";
-    $enviar=$conexion->query($consulInsr);
-    echo "Se ha creado un nuevo usuario";
-}
-?>
+        $consulInsr = "INSERT INTO tblusuario(UsuCedula,UsuNombre,UsuApellido,UsuContrasenaSis,UsuForaPerfil,UsuForaArea ) VALUES('$documentoP','$nombre','$apellido','$contrasenatmp','$perfilas','$areaAsignado')";
+        $enviar = $conexion->query($consulInsr);
+        echo "Se ha creado un nuevo usuario";
+    }
+    ?>
 
 </body>
 

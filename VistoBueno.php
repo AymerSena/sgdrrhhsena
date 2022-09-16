@@ -14,40 +14,40 @@ require("sesionJefe.php");
 </head>
 
 <body>
-<?php
-    include("cabecera.php");
-?>
-
-
-
-<?php
-require("conexionBD.php");
-$valor = $_GET["id"];
-if (isset($_POST["runEstado"])) {
-    $estado=$_POST["estadoNew"];
-    $senteciaSQL="UPDATE tblausencias SET AusEstado='$estado' WHERE AusCodigo=$valor;";
-    $runComandSQL= $conexion->query($senteciaSQL);
-    ?>
-    <script>
-        alert("Se genero el cambio de la ausencia");
-        window.location.href="menuJefeVistosBuenos.php";
-    </script>
     <?php
-}
+    include("cabecera.php");
+    ?>
 
-?>
 
-<form action="" method="post">
-    <label for="">Nuevo estado</label>
-    <select name="estadoNew" id="">
-        <option value="VistoBueno">Dar visto bueno</option>
-        <option value="Denegado">Demegar el visto bueno</option>
-    </select>
-    <button name="runEstado">Aceptar</button>
-    <button><a href="menuJefeVistosBuenos.php">Cancelar</a></button>
-</form>
 
-<?php
+    <?php
+    require("conexionBD.php");
+    $valor = $_GET["id"];
+    if (isset($_POST["runEstado"])) {
+        $estado = $_POST["estadoNew"];
+        $senteciaSQL = "UPDATE tblausencias SET AusEstado='$estado' WHERE AusCodigo=$valor;";
+        $runComandSQL = $conexion->query($senteciaSQL);
+    ?>
+        <script>
+            alert("Se genero el cambio de la ausencia");
+            window.location.href = "menuJefeVistosBuenos.php";
+        </script>
+    <?php
+    }
+
+    ?>
+
+    <form action="" method="post">
+        <label for="">Nuevo estado</label>
+        <select name="estadoNew" id="">
+            <option value="VistoBueno">Dar visto bueno</option>
+            <option value="Denegado">Demegar el visto bueno</option>
+        </select>
+        <button class="rounded" name="runEstado">Aceptar</button>
+        <button class="rounded"><a href="menuJefeVistosBuenos.php">Cancelar</a></button>
+    </form>
+
+    <?php
     include("pie.php");
     ?>
 </body>

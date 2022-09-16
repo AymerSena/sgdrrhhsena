@@ -11,15 +11,16 @@ require("sesionJefe.php");
     <link rel="stylesheet" href="CSS/plantillaConten.css">
     <title>Plantilla para proyecto unix</title>
 </head>
+
 <body>
-<?php
+    <?php
     include("cabecera.php");
-?>
-<div class="cuerpo">
-    <button><a href="resEvaArea.php">Informe por área</a></button>
-    <button><a href="">Informe por funcionario</a></button>
-   
-</div>
+    ?>
+    <div class="cuerpo">
+        <button class="rounded"><a href="resEvaArea.php">Informe por área</a></button>
+        <button class="rounded"><a href="">Informe por funcionario</a></button>
+
+    </div>
     <?php
     include("pie.php");
     ?>

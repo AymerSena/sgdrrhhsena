@@ -3,7 +3,7 @@ require("sesionAdmin.php");
 require("classphp/areasorg.php");
 if (isset($_POST["save"])) {
     $instanciar = new areasorg();
-    $creaObej = $instanciar->crear($_POST["nameAre"], $_POST["docResp"], $_POST["descAre"]); 
+    $creaObej = $instanciar->crear($_POST["nameAre"], $_POST["docResp"], $_POST["descAre"]);
 }
 if (isset($_POST["volver"])) {
     header("Location: areasOrga.php");
@@ -11,12 +11,14 @@ if (isset($_POST["volver"])) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Área</title>
 </head>
+
 <body>
     <?php
     include("cabecera.php");
@@ -29,8 +31,8 @@ if (isset($_POST["volver"])) {
             <input type="number" name="docResp"><br><br>
             <label for="">Ingrese por favor descripción del área</label>
             <input type="text" name="descAre"><br><br>
-            <button name="save">Guardar</button>
-            <button name="volver">Volver al menú</button>
+            <button class="rounded" name="save"><span class="text-green">Guardar</span></button>
+            <button class="rounded" name="volver"><span class="text-green">Volver al menú</span></button>
         </form>
 
     </div>
@@ -39,4 +41,5 @@ if (isset($_POST["volver"])) {
     include("pie.php");
     ?>
 </body>
+
 </html>

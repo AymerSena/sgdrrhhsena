@@ -26,7 +26,7 @@ include("sesionAdmin.php");
       <th>Área</th>
       <th>Descripcions</th>
       <th>Lider o director área</th>
-       <th> <a href="crearArea.php"> <button type= "button" class="btn btn-info">Nuevo</button> </a> </th>
+       <th> <a href="crearArea.php"> <button class="rounded" type= "button" class="btn btn-info"><span class="text-green">Nuevo</span></button> </a> </th>
 
 
        <?php
@@ -43,14 +43,14 @@ echo "<td>"; echo $fila['AreNombre']; echo "</td>";
 echo "<td>"; echo $fila[ 'AreDescripcion']; echo "</td>";
 echo "<td>"; echo $fila[ 'AreLider']; echo "</td>";
 
-echo "<td> <a href='modif_area.php?no=" .$fila['AreCodigo']."'> <button type= 'button' class= 'btnbtn-success'>Modificar</button> </a> </td>";
+echo "<td> <a href='modif_area.php?no=" .$fila['AreCodigo']."'> <button class="rounded" type= 'button' class= 'btnbtn-success'>Modificar</button> </a> </td>";
 echo "<td> <a href='eliminarAre.php?no=" .$fila['AreCodigo']." type= 'button' class='btnbtn-danger' >Eliminar</button></a> </td>";
 echo "</tr>";
 }
 }
 ?>
 </table>
-<button><a href="menuAdministrador.php">Volver al menú</a></button>
+<button class="rounded"><span class="text-green"><a href="menuAdministrador.php">Volver al menú</a></span></button>
 </div>
 <?php
     include("pie.php");

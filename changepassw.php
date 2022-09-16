@@ -5,7 +5,7 @@
         <input class="box" type="text" placeholder="Contraseña Actual" name="Contra"><br><br>
         <input class="box" type="text" placeholder="Nueva Contraseña" name="NuevaContrasena"><br><br>
         <input class="box" type="text" placeholder="Repetir nueva contraseña" name="RepetirNuevaContrasena"><br><br>
-        <button id=boton type="submit" name="CambiarContrasena">Cambiar contraseña</button><br>
+        <button class="rounded" id=boton type="submit" name="CambiarContrasena"><span class="text-green">Cambiar contraseña</span></button><br>
     </form>
 </section>
 </body>
