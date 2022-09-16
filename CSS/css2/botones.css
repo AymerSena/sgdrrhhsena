@@ -1,9 +1,9 @@
-button{
+/*button{
     color: white;
     background-color: #3DB0FF;
     font-size: 25px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    -webkit-transition-duration: 0.4s; /* Safari */
+    -webkit-transition-duration: 0.4s; 
     transition-duration: 0.4s;
     border: 0;
 }
@@ -12,7 +12,56 @@ button.a{
     background-color: #3DB0FF;
     font-size: medium;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    -webkit-transition-duration: 0.4s; /* Safari */
+    -webkit-transition-duration: 0.4s; 
     transition-duration: 0.4s;
     border: 0;
+}*/
+
+button {
+    margin: 20px auto;
+    border: none;
+    padding: 10px 44px;
+    font-size: 22px;
+    position: relative;
+    border-color: white;
+    border-style: solid;
+    border-width: 3px;
+}
+
+button::before {
+    transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    content: "";
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+button.rounded {
+    border-radius: 50px;
+}
+
+button.rounded .text-green {
+    color: white;
+    mix-blend-mode: difference;
+}
+
+button.rounded .text-green a {
+    color: white;
+    mix-blend-mode: difference;
+    text-decoration: none;
+    list-style: none;
+}
+
+button.rounded::before {
+    border-radius: 50px;
+    width: 25%;
+    background: #0a1f92;
+}
+
+button.rounded:hover::before {
+    background: #0a1f92;
+    width: 100%;
+    color: white;
 }

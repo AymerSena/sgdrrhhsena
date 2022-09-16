@@ -44,10 +44,7 @@ include("sesionAdmin.php");
                     <a href="certi.php">Generar certificados</a>
                 </li>
                 <li>
-                    <a href="gestionPassword.php">Gestion de contraseñas empleados</a>
-                </li>
-                <li>
-                    <a href="configProyect.php">Menú gestion del sistema</a>
+                    <a href="areasOrga.php">Gestión de áreas</a>
                 </li>
                 
             </ul>

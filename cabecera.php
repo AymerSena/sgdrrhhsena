@@ -14,6 +14,9 @@ include("constaVari.php");
     <link rel="stylesheet" href="CSS/changepassw.css">
     <link rel="stylesheet" href="CSS/submenu.css">
     <link rel="stylesheet" href="CSS/menus.css">
+    <link rel="stylesheet" href="CSS/css2/botones.css">
+    <link rel="stylesheet" href="CSS/css2/formularios.css">
+    <link rel="stylesheet" href="CSS/css2/tablas.css">
 </head>
 <body>
 <?php

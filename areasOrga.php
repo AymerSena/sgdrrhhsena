@@ -16,9 +16,6 @@ include("sesionAdmin.php");
 <?php
     include("cabecera.php");
 ?>
-<div class="cuerpo">
-
-<h1>Áreas de la organización</h1>
 
 <table style="margin: auto; width: 800px; border-collapse:separate; border-spacing: 10px 5px;">
     <thead>
@@ -49,9 +46,8 @@ echo "</tr>";
 }
 }
 ?>
+<td colspan="2"><button><a href="menuAdministrador.php">Volver al menú</a></button></td>
 </table>
-<button><a href="menuAdministrador.php">Volver al menú</a></button>
-</div>
 <?php
     include("pie.php");
 ?>
