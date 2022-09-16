@@ -18,9 +18,9 @@ class resulEvalutivos{
         $runSent=$conexion->query($sentSql);
         return $runSent;
     }
-    public function promedioPorEvaluacion($evalu){
+    public function sumaReulPorEvaluacion($evalu){
         require("./conexionBD.php");
-        $sentSQL1="SELECT evh.EvRForEvaluacion, SUM(evr.SELECT COUNT(EvRForEvaluacion) FROM ResNota) FROM tblhisevaluacionesr evh INNER JOIN tblresultadoeva evr ON evh.EvRCodigo=evr.ResForEvrHis WHERE evh.EvRForEvaluacion='$evalu'";
+        $sentSQL1="SELECT SUM(res.ResNota) FROM tblresultadoeva res INNER JOIN tblhisevaluacionesr his ON his.EvRCodigo = res.ResForEvrHis INNER JOIN tblevaluaciones eva ON his.EvRForEvaluacion=eva.EvaCodigo WHERE his.EvRForEvaluacion='$evalu'";
         $runFiSql=$conexion->query($sentSQL1);
         return $runFiSql;
     }

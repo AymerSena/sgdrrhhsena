@@ -43,7 +43,7 @@ echo "<td>"; echo $fila['AreNombre']; echo "</td>";
 echo "<td>"; echo $fila[ 'AreDescripcion']; echo "</td>";
 echo "<td>"; echo $fila[ 'AreLider']; echo "</td>";
 
-echo "<td> <a href='modif_area.php?no=" .$fila['AreCodigo']."'> <button class="rounded" type= 'button' class= 'btnbtn-success'>Modificar</button> </a> </td>";
+echo "<td> <a href='modif_area.php?no=" .$fila['AreCodigo']."'> <button class="."rounded"." type= 'button' class= 'btnbtn-success'>Modificar</button> </a> </td>";
 echo "<td> <a href='eliminarAre.php?no=" .$fila['AreCodigo']." type= 'button' class='btnbtn-danger' >Eliminar</button></a> </td>";
 echo "</tr>";
 }
