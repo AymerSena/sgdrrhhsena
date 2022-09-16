@@ -1,6 +1,9 @@
- <?php
+<?php
  require("conexionBD.php");  
- require("constaVari.php");
+ require("constaVari.php"); 
+ require("classphp/documentos.php");
+ $nombreDoc=$_POST["name1"];
+ $descriDoc=$_POST["descripcion"];
  session_start();
  //Crea carpeta o valida si ya existe
  $_SESSION["idUs"];
@@ -15,18 +18,15 @@ $SubCarpeta = $_SESSION["idUs"];
 
 $subirFile = $directorio.basename($_FILES["file"]['name']);
 if (move_uploaded_file($_FILES['file']['tmp_name'], $subirFile)) {
-  } else {
+} else {
      echo "La subida ha fallado";
   }
-  header("Location: " . $_SERVER["HTTP_REFERER"]);
-/* Codigo subir archivo Miguel
- // Cómo subir el archivo
- $fichero = $_FILES["file"];
- // Cargando el fichero en la carpeta "Documentos"
- move_uploaded_file ($fichero["tmp_name"] ,"Documentos/". $SubCarpeta);
- // Redirigiendo hacia atrás
+
+ $ruta_c=$directorio.basename($_FILES["file"]['name']);
+
+ $clase=new documentos();
+ $obj=$clase->insertarDocumento($nombreDoc,$descriDoc,$ruta_c,$_SESSION["idUs"]);
  header("Location: " . $_SERVER["HTTP_REFERER"]);
-*/
  ?>
 
 

@@ -47,6 +47,9 @@ require("sesionRRHH.php");
                 <li>
                     <a href="menuDataSen.php"><img class="logo" >Gestion Datos funcionarios</a>
                 </li>
+                <li>
+                    <a href="consultaDocumento.php"><img class="logo" >Consultar documentos</a>
+                </li>
             </ul>
         </nav>
     </div>
