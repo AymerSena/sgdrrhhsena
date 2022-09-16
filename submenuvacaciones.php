@@ -1,4 +1,7 @@
-<?php include('Template/cabecera.php'); ?>
+<?php
+require("sesionCompartida.php");
+include("cabecera.php");
+?>
 <div class="sub">
     <ul>
         <!--Agendar vacaciones-->
@@ -15,4 +18,6 @@
             </a></li>
     </ul>
 </div>
-<?php include('Template/pie.php'); ?>
+<?php
+include("pie.php");
+?>

@@ -16,24 +16,26 @@ require("sesionEmpleado.php");
 <?php
     include("cabecera.php");
 ?>
-<div class="cuerpo">
+
         <div class="container">
     <div id="Menu">
-        <h1 id="tit">¿Que deseas hacer?</h1>
         <nav id="Logos">
             <ul>
-                <li>
-                    <a href="NegociacionPeriodos.php"><img class="logo" src="https://1.bp.blogspot.com/-a5TanyEIRgk/YT5yHI4qFcI/AAAAAAAAAFs/mCLSeiyQ5RMHRy8tevTtSORRIaODcvaFQCNcBGAsYHQ/s320/IconoActualiData.png"></a>
-                </li>
-                <li>
-                    <a href="MenuEmpleadoVacaTabla.php"><img class="logo" src="https://1.bp.blogspot.com/-pWbP6N_2-F0/YT5yIQZXEtI/AAAAAAAAAGA/n0-4cvp7gFYTvNkgiiwsFx1FQM-5hRWZACNcBGAsYHQ/s320/IconoCarDesArch.png"></a>
-                </li>
+                <button>
+                    <a href="NegociacionPeriodos.php">Nueva ausencia</a>
+                </button>
+                <button>
+                    <a href="MenuEmpleadoVacaTabla.php">Historico de ausencias</a>
+                </button>
+                <button>
+                    <a href="menuEmpleado.php">Volver al menú</a>
+                </button>
                 
             </ul>
         </nav>
     </div>
         </div>
-</div>
+
 <?php
     include("pie.php");
     ?>

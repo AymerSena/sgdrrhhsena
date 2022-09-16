@@ -46,12 +46,12 @@ include("constaVari.php");
                     <span class="user_name"><?php echo $nombreUsu; ?></span>
                 </li>
                 <li>
-                    <a href="#">
+                <a href="photoPerfil.php">
                         <span class="icon">
-                            <ion-icon name="notifications-outline"></ion-icon>
+                            <ion-icon name="person-circle-outline"></ion-icon>
                         </span>
-                        <span class="text">Notificaciones</span>
-                    </a>
+                        <span class="text">Foto de perfil</span>
+                </a>
                 </li>
                 <li>
                     <a href="datosBasicos.php">
@@ -69,22 +69,7 @@ include("constaVari.php");
                         <span class="text">Documentos</span>
                     </a>
                 </li>
-                <li>
-                    <a href="submenuvacaciones.php">
-                        <span class="icon">
-                            <ion-icon name="airplane-outline"></ion-icon>
-                        </span>
-                        <span class="text">Gestion de ausencias</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="submenuevalu.php">
-                        <span class="icon">
-                            <ion-icon name="clipboard-outline"></ion-icon>
-                        </span>
-                        <span class="text">Evaluaciones</span>
-                    </a>
-                </li>
+                
                 <li>
                     <a href="menuInformes.php">
                         <span class="icon">

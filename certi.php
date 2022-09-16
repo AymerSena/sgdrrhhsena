@@ -15,15 +15,11 @@ require("conexionBD.php");
     include("cabecera.php");
     ?>
     <h1>Pruebas de generar certificados</h1>
-    <h2>Menú de certificados</h2>
-    <div id="menu">
-        <ul>
-            <li><a href="certificadoConSueldo.php" target="_blank">Certificado laboral con sueldo.</a></li>
-            <li><a href="laboralFuncionesSueldo.php" target="_blank">Certificado laboral con sueldo y con funciones</a></li>
-            <li><a href="laboralFuncionesNSueldo.php" target="_blank">Certificado laboral sin sueldo y con funciones</a></li>
-            <li><a href="certificadoLabsinSuel.php" target="_blank">Certificado laboral sin sueldo</a></li>
-        </ul>
-    </div>
+    <h2>Menú de certificados</h2>     
+            <button><a href="certificadoConSueldo.php" target="_blank">Certificado laboral con sueldo.</a></button>
+            <button><a href="laboralFuncionesSueldo.php" target="_blank">Certificado laboral con sueldo y con funciones</a></button>
+            <button><a href="laboralFuncionesNSueldo.php" target="_blank">Certificado laboral sin sueldo y con funciones</a></button>
+            <button><a href="certificadoLabsinSuel.php" target="_blank">Certificado laboral sin sueldo</a></button>
     <?php
     include("pie.php");
     ?>
