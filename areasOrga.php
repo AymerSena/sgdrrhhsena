@@ -26,16 +26,16 @@ include("sesionAdmin.php");
       <th>Área</th>
       <th>Descripcions</th>
       <th>Lider o director área</th>
-       <th> <a href="crearArea.php"> <button class="rounded" type= "button" class="btn btn-info"><span class="text-green">Nuevo</span></button> </a> </th>
+      <th> <a href="crearArea.php"> <button class="rounded" type= "button" class="btn btn-info"><span class="text-green">Nuevo</span></button> </a> </th>
 
 
-       <?php
+<?php
 
 $resultado = $conexion->query("SELECT * FROM tblarea");
 
 if($resultado -> num_rows>0){
  //while($filas=mysql_fetch_assoc($resultado)) {
-   while ($fila=$resultado->fetch_array())
+while ($fila=$resultado->fetch_array())
 {
   echo "<tr>";
 echo "<td>"; echo $fila['AreCodigo']; echo "</td>";

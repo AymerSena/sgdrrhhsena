@@ -16,6 +16,7 @@ include("constaVari.php");
     <link rel="stylesheet" href="menus.css">
     <link rel="stylesheet" href="CSS/css2/botones.css">
     <link rel="stylesheet" href="CSS/css2/formularios.css">
+
 </head>
 
 <body>

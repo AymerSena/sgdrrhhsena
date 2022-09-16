@@ -18,30 +18,48 @@ require("sesionEmpleado.php");
 ?>
 <div class="cuerpo">
         <div class="container">
-    <div id="Menu">
-        <h1 id="tit">¿Que deseas hacer?</h1>
-        <nav id="Logos">
+        <div id="Menu">
+    <nav id="logonav">
             <ul>
                 <li>
-                    <a href="datosBasicos.html"><img class="logo" src="https://1.bp.blogspot.com/-a5TanyEIRgk/YT5yHI4qFcI/AAAAAAAAAFs/mCLSeiyQ5RMHRy8tevTtSORRIaODcvaFQCNcBGAsYHQ/s320/IconoActualiData.png"></a>
+                    <a href="">
+                        <span class="logito">
+                            <ion-icon name="people-outline"></ion-icon>
+                        </span>
+                        <span class="icontittle">Gestion de datos basicos</span>
+                    </a>
                 </li>
                 <li>
-                    <a href=""><img class="logo" src="https://1.bp.blogspot.com/-pWbP6N_2-F0/YT5yIQZXEtI/AAAAAAAAAGA/n0-4cvp7gFYTvNkgiiwsFx1FQM-5hRWZACNcBGAsYHQ/s320/IconoCarDesArch.png"></a>
+                    <a href="">
+                        <span class="logito">
+                            <ion-icon name="airplane-outline"></ion-icon>
+                        </span>
+                        <span class="icontittle">Gestion de ausencias</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="MenuEmpleadoVaca.php"><img class="logo" src="https://1.bp.blogspot.com/-CVbG8VMJUGg/YT5yP3LJHnI/AAAAAAAAAG8/oSqBcKNbMWcH6gM4eXFSKPc2TC3Mm0rJgCNcBGAsYHQ/s320/IconoSolicitarYConsuVa.png"></a>
+                    <a href="">
+                        <span class="logito">
+                            <ion-icon name="document-attach-outline"></ion-icon>
+                        </span>
+                        <span class="icontittle">Documentos</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="moduloEvalucion.html"><img class="logo" src="https://1.bp.blogspot.com/-DFzD5Wp_k1I/YT5yJ1ibjFI/AAAAAAAAAGM/J3uFXohr1YY49BYHDVROIISKXNJ3XvDGACNcBGAsYHQ/s320/IconoCrearEvaP.png"></a>
-                </li><br> <br>
-                <li>
-                    <a href="evaluarEmp.html"><img class="logo" src="https://1.bp.blogspot.com/-Zxks8ycBOc0/YT5yM4bZqzI/AAAAAAAAAGk/WdnOOm982uULk6R7qeFviWx68IABXBDcQCNcBGAsYHQ/s0/IconoEvaluaciones.png"></a>
+                    <a href="">
+                        <span class="logito">
+                            <ion-icon name="clipboard-outline"></ion-icon>
+                        </span>
+                        <span class="icontittle">Evaluaciones</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="AprobarVacaciones.html"><img class="logo" src="https://1.bp.blogspot.com/-ajVBdcodOK4/YUVt7StZMoI/AAAAAAAAAHw/AIybbv4b0DMa26b1cmL4u4Pi4rJLQcT0ACNcBGAsYHQ/s0/aprobvACAS-removebg-preview.png"></a>
-                </li>
-                <li>
-                    <a href="menuInformes.php"><img class="logo" src="https://1.bp.blogspot.com/-zNm1SxTs37c/YT5yN-a4IwI/AAAAAAAAAGs/ya7hx4ayapcuP53sZUm-XyRiY27bjjnIACNcBGAsYHQ/s0/IconoInformes.png"></a>
+                    <a href="">
+                        <span class="logito">
+                        <ion-icon name="stats-chart-outline"></ion-icon>
+                        </span>
+                        <span class="icontittle">Informes</span>
+                    </a>
                 </li>
             </ul>
         </nav>
