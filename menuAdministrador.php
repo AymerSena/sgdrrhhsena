@@ -13,44 +13,43 @@ include("sesionAdmin.php");
 </head>
 
 <body>
-<?php
+    <?php
     include("cabecera.php");
-?>
-<div class="cuerpo">
+    ?>
+    <div class="cuerpo">
         <div class="container">
-        <div id="Menu">
-        <h1 id="tit">¿Que deseas hacer?</h1>
-        <nav id="logos">
-            <ul>
-                <li>
-                    <a href="crearUsuario.php"><img class="logo" src="https://1.bp.blogspot.com/--_3Twc7jE_4/YT5yHKJ8sqI/AAAAAAAAAF0/ywykiJsi3yY8S1op1g-MyU8O072GJoeYACNcBGAsYHQ/s0/IconoAdmPerfiles.png"></a>
-                </li>
-                <li>
-                    <a href="carge_documentos.php"><img class="logo" src="https://1.bp.blogspot.com/-pWbP6N_2-F0/YT5yIQZXEtI/AAAAAAAAAGA/n0-4cvp7gFYTvNkgiiwsFx1FQM-5hRWZACNcBGAsYHQ/s320/IconoCarDesArch.png"></a>
-                </li>
-                <li>
-                    <a href=""><img class="logo" src="https://1.bp.blogspot.com/-yxwhRnbY8mQ/YT5yLdXGtOI/AAAAAAAAAGY/2MsyxUcL5uAVrLU0RpV2-lZvznBtNf4CgCNcBGAsYHQ/s320/IconoCrudDataSen.png"></a>
-                </li>
-                <li>
-                    <a href="MenuAdministradorVaca.php"><img class="logo" src="https://1.bp.blogspot.com/-CVbG8VMJUGg/YT5yP3LJHnI/AAAAAAAAAG8/oSqBcKNbMWcH6gM4eXFSKPc2TC3Mm0rJgCNcBGAsYHQ/s320/IconoSolicitarYConsuVa.png"></a>
-                </li>
-                <li>
-                    <a href="datosBasicos.php"><img class="logo" src="https://1.bp.blogspot.com/-a5TanyEIRgk/YT5yHI4qFcI/AAAAAAAAAFs/mCLSeiyQ5RMHRy8tevTtSORRIaODcvaFQCNcBGAsYHQ/s320/IconoActualiData.png"></a>
-                </li>
-                <li>
-                    <a href="menuInformes.php"><img class="logo" src="https://1.bp.blogspot.com/-zNm1SxTs37c/YT5yN-a4IwI/AAAAAAAAAGs/ya7hx4ayapcuP53sZUm-XyRiY27bjjnIACNcBGAsYHQ/s0/IconoInformes.png"></a>
-                </li>
-                <li>
-                    <a href="certi.php">Generar certificados</a>
-                </li>
-                <li>
-                    <a href="areasOrga.php">Gestión de áreas</a>
-                </li>
-                
-            </ul>
-        </nav>
-        <img src="https://1.bp.blogspot.com/-CRGFBvE8s8k/YT5yRhIEj8I/AAAAAAAAAHM/dplt4qgxJmcjfSP213rWRyF0EoW_BQlSACNcBGAsYHQ/s332/logoPag.png" id="logoUnix">
-    </div>
+            <div id="Menu">
+                <nav id="logos">
+                    <ul>
+                        <button class="rounded">
+                            <span class="text-green"><a href="crearUsuario.php">Administracion de perfiles</a></span>
+                        </button>
+                        <button class="rounded">
+                            <span class="text-green"><a href="carge_documentos.php">Cargar y descargar documentos</a></span>
+                        </button>
+                        <button class="rounded">
+                            <span class="text-green"><a href="">CRUD Datos sencibles</a></span>
+                        </button>
+                        <button class="rounded">
+                            <span class="text-green"><a href="MenuAdministradorVaca.php">Solicitar y consultar vacaciones</a></span>
+                        </button>
+                        <button class="rounded">
+                            <span class="text-green"><a href="datosBasicos.php">Actualizar datos</a></span>
+                        </button>
+                        <button class="rounded">
+                            <span class="text-green"><a href="menuInformes.php">Informes</a></span>
+                        </button>
+                        <button class="rounded">
+                            <span class="text-green"><a href="certi.php">Generar certificados</a></span>
+                        </button>
+                        <button class="rounded">
+                            <span class="text-green"><a href="areasOrga.php">Gestión de áreas</a></span>
+                        </button>
+
+                    </ul>
+                </nav>
+                <img src="https://1.bp.blogspot.com/-CRGFBvE8s8k/YT5yRhIEj8I/AAAAAAAAAHM/dplt4qgxJmcjfSP213rWRyF0EoW_BQlSACNcBGAsYHQ/s332/logoPag.png" id="logoUnix">
+            </div>
         </div>
     </div>
     <?php
