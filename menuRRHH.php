@@ -14,35 +14,35 @@ require("sesionRRHH.php");
 </head>
 
 <body>
-<?php
+    <?php
     include("cabecera.php");
-?>
+    ?>
 
-        <nav id="Logos">
-            
-                <button>
-                    <a href="datosBasicos.html">Actualizar datos basicos</a>
-                </button>
-                <button>
-                    <a href="menuRRHHVaca.php">Gestion de ausencias</a>
-                </button>
-               
-                <button>
-                    <a href="menuRRHHaAprobarVaca.php">Aprobación de vacaciones</a>
-                </button>
-                <button>
-                    <a href="menuInformes.php">Certificados</a>
-                </button>
-                <button>
-                    <a href="menuDataSen.php"><img class="logo" >Gestion Datos funcionarios</a>
-                </button>
-                <button>
-                    <a href="consultaDocumento.php"><img class="logo" >Consultar documentos</a>
-                </button>
-           
-        </nav>
+    <nav id="Logos">
 
-<?php
+        <button class="rounded">
+            <span class="text-green"><a href="datosBasicos.html">Actualizar datos basicos</a></span>
+        </button>
+        <button class="rounded">
+            <span class="text-green"><a href="menuRRHHVaca.php">Gestion de ausencias</a></span>
+        </button>
+
+        <button class="rounded">
+            <span class="text-green"><a href="menuRRHHaAprobarVaca.php">Aprobación de vacaciones</a></span>
+        </button>
+        <button class="rounded">
+            <span class="text-green"><a href="menuInformes.php">Certificados</a></span>
+        </button>
+        <button class="rounded">
+            <span class="text-green"><a href="menuDataSen.php"><img class="logo">Gestion Datos funcionarios</a></span>
+        </button>
+        <button class="rounded">
+            <span class="text-green"><a href="consultaDocumento.php"><img class="logo">Consultar documentos</a></span>
+        </button>
+
+    </nav>
+
+    <?php
     include("pie.php");
     ?>
 </body>

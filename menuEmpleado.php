@@ -13,29 +13,29 @@ require("sesionEmpleado.php");
 </head>
 
 <body>
-<?php
+    <?php
     include("cabecera.php");
-?>
+    ?>
 
-       
-        <nav id="Logos">
-            <ul>
-                <button>
-                    <a href="datosBasicos.html">Actualización datos basicos</a>
-                </button>
-                <button>
-                    <a href="index_documento.php">Carga de archivos</a>
-                </button>
-                <button>
-                    <a href="MenuEmpleadoVaca.php">Gestion de ausencias</a>
-                </button>
-                <button>
-                    <a href="certi.php">Certificados</a>
-                </button>
-            </ul>
-        </nav>
- 
-<?php
+
+    <nav id="Logos">
+        <ul>
+            <button class="rounded">
+                <span class="text-green"><a href="datosBasicos.html">Actualización datos basicos</a></span>
+            </button>
+            <button class="rounded">
+                <span class="text-green"><a href="index_documento.php">Carga de archivos</a></span>
+            </button>
+            <button class="rounded">
+                <span class="text-green"><a href="MenuEmpleadoVaca.php">Gestion de ausencias</a></span>
+            </button>
+            <button class="rounded">
+                <span class="text-green"><a href="certi.php">Certificados</a></span>
+            </button>
+        </ul>
+    </nav>
+
+    <?php
     include("pie.php");
     ?>
 </body>

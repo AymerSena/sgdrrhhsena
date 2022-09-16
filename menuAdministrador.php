@@ -13,33 +13,33 @@ include("sesionAdmin.php");
 </head>
 
 <body>
-<?php
+    <?php
     include("cabecera.php");
-?>
+    ?>
 
-        <nav id="logos">
-                <button>
-                    <a href="crearUsuario.php">Gestionar usuarios</a>
-                </button>
-                <button>
-                    <a href="index_documento.php">Cargar documentos</a>
-                </button>
-                <button>
-                    <a href="MenuAdministradorVaca.php">Gestion de ausencias</a>
-                </button>
-                <button>
-                    <a href="datosBasicos.php">Actualizar datos basicos</a>
-                </button>
-                <button>
-                    <a href="certi.php">Certificados laborales</a>
-                </button>
-                <button>
-                    <a href="certi.php">Generar certificados</a>
-                </button>
-                <button>
-                    <a href="areasOrga.php">Gestión de áreas</a>
-                </button>
-        </nav>
+    <nav id="logos">
+        <button class="rounded">
+            <span class="text-green"><a href="crearUsuario.php">Gestionar usuarios</a></span>
+        </button>
+        <button class="rounded">
+            <span class="text-green"><a href="index_documento.php">Cargar documentos</a></span>
+        </button>
+        <button class="rounded">
+            <span class="text-green"><a href="MenuAdministradorVaca.php">Gestion de ausencias</a></span>
+        </button>
+        <button class="rounded">
+            <span class="text-green"><a href="datosBasicos.php">Actualizar datos basicos</a></span>
+        </button>
+        <button class="rounded">
+            <span class="text-green"><a href="certi.php">Certificados laborales</a></span>
+        </button>
+        <button class="rounded">
+            <span class="text-green"><a href="certi.php">Generar certificados</a></span>
+        </button>
+        <button class="rounded">
+            <span class="text-green"><a href="areasOrga.php">Gestión de áreas</a></span>
+        </button>
+    </nav>
     <?php
     include("pie.php");
     ?>
