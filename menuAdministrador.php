@@ -18,9 +18,7 @@ include("sesionAdmin.php");
     ?>
 
     <nav id="logos">
-        <button class="rounded">
-            <span class="text-green"><a href="crearUsuario.php">Gestionar usuarios</a></span>
-        </button>
+
         <button class="rounded">
             <span class="text-green"><a href="index_documento.php">Cargar documentos</a></span>
         </button>
